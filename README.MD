@@ -1,8 +1,3 @@
-<style>
-   .colortext {
-     color: #91b3f2;
-   }
-</style>
 <h1 align="center">Я <span class="colortext">Стас</span>
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 <div align="center">
