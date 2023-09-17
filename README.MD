@@ -1,7 +1,7 @@
 <h1 align="center">Я <span class="colortext">Стас</span>
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 <div align="center">
-    <img align="center" src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=ITMO Software Engineering student" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=3000&pause=1000&repeat=false&width=435&lines=ITMO+Software+Engineering+student+" alt="Typing SVG" />
 </div>
 
 ## Опыт 💻
