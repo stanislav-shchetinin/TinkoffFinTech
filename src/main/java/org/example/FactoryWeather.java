@@ -9,10 +9,18 @@ import java.util.TreeMap;
 import java.util.UUID;
 
 public class FactoryWeather {
+    /**
+     * Ключ - имя города, значение - его идентифиактор
+     * */
     private final Map<String, UUID> mapId;
+
+
     public FactoryWeather(){
         mapId = new TreeMap<>();
     }
+    /**
+     * Создание объекта класса Weather (при создании определяется идентификатор региона)
+     * */
     public Weather createWeather(String nameRegion,
                                  Double temperature,
                                  ZonedDateTime creationData){
@@ -30,6 +38,9 @@ public class FactoryWeather {
         }
 
     }
+    /**
+     * Setter имени региона (идентификатор также изменияется)
+     * */
     public void setWeatherNameRegion(Weather weather, String nameRegion){
         try {
             Field uuidWeather = weather.getClass().getDeclaredField("uuid");
@@ -43,7 +54,9 @@ public class FactoryWeather {
         }
 
     }
-
+    /**
+     * Определение идентификатора по имени региона (утилитарный метод)
+     * */
     private UUID getUUIDFromNameRegion(String nameRegion){
         UUID uuid;
         if (mapId.containsKey(nameRegion)){

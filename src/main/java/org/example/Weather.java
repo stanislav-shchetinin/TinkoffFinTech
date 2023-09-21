@@ -1,10 +1,16 @@
 package org.example;
 
 import lombok.*;
-
 import java.time.ZonedDateTime;
 import java.util.UUID;
 
+/**
+ * <p>Базовый класс</p>
+ * <p>Конструктор приватный, чтобы было единственное место для создания объекта - FactoryWeather
+ * (это уменьшает риск создания некорретного идентификатора). Создание объекта в фабрике реализовано
+ * через Reflection API</p>
+ * <p>Setter для nameRegion аналогичным образом сделан в фабрике</p>
+ * */
 @Getter
 @ToString
 @AllArgsConstructor(access=AccessLevel.PRIVATE)
