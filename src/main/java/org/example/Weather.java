@@ -1,30 +1,25 @@
 package org.example;
 
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.ZonedDateTime;
-@Getter
-public class Weather {
-    //использовать патерн Observer для триггера id при изменении nameRegion
-    private int id;
+import java.util.UUID;
 
+@Getter
+@ToString
+@AllArgsConstructor(access=AccessLevel.PRIVATE)
+public class Weather {
+    /**
+     * <p>Setter этого поля отсутсвует, т.к. идентификатор зависит от nameRegion</p>
+     * Устанавливается в конструкторе, т.к. значение поля uuid задает, пораждающая фабрика
+     * */
+    private UUID uuid;
+    /**
+     * Setter поля nameRegion реалиозован в FactoryWeather, который порадил этот объект
+     * */
     private String nameRegion;
     @Setter
     private Double temperature;
     @Setter
     private ZonedDateTime creationDate;
-    public Weather(@NonNull String nameRegion,
-                   @NonNull Double temperature,
-                   @NonNull ZonedDateTime creationDate){
-        this.nameRegion = nameRegion;
-        this.id = this.nameRegion.hashCode();
-        this.temperature = temperature;
-        this.creationDate = creationDate;
-    }
-    public void setNameRegion(@NonNull String nameRegion) {
-        this.nameRegion = nameRegion;
-        this.id = nameRegion.hashCode();
-    }
 }
