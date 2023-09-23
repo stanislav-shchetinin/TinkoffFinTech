@@ -2,6 +2,10 @@ plugins {
     id 'java'
 }
 
+configurations {
+    fatJar
+}
+
 group = 'org.example'
 version = '1.0-SNAPSHOT'
 
@@ -14,7 +18,19 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
 }
+
+tasks.register('fatJar', Jar) {
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    manifest {
+        attributes 'Main-Class': 'org.example.Main'
+    }
+    with jar
+}
+
 
 test {
     useJUnitPlatform()
