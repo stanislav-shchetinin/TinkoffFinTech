@@ -1,6 +1,8 @@
-package org.example;
+package weather;
 
 import lombok.AllArgsConstructor;
+import weather.Weather;
+
 import java.util.*;
 @AllArgsConstructor
 public class WrapperListWeather{

@@ -1,5 +1,9 @@
 package org.example;
 
+import weather.FactoryWeather;
+import weather.Weather;
+import weather.WrapperListWeather;
+
 import java.time.ZonedDateTime;
 
 public class Main {

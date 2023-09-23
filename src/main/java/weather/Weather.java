@@ -1,4 +1,4 @@
-package org.example;
+package weather;
 
 import lombok.*;
 import java.time.ZonedDateTime;
