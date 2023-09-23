@@ -28,4 +28,5 @@ public class Weather {
     private Double temperature;
     @Setter
     private ZonedDateTime creationDate;
+
 }

@@ -13,8 +13,6 @@ public class FactoryWeather {
      * Ключ - имя города, значение - его идентифиактор
      * */
     private final Map<String, UUID> mapId;
-
-
     public FactoryWeather(){
         mapId = new TreeMap<>();
     }
