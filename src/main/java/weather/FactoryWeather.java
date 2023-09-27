@@ -1,21 +1,18 @@
 package weather;
 
-import util.ReflectionConstants;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.time.ZonedDateTime;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.UUID;
-
 public class FactoryWeather {
     /**
      * Ключ - имя города, значение - его идентифиактор
      * */
     private final Map<String, UUID> mapId;
-    public FactoryWeather(){
+    private FactoryWeather(){
         mapId = new TreeMap<>();
     }
     /**
@@ -24,35 +21,16 @@ public class FactoryWeather {
     public Weather createWeather(String nameRegion,
                                  Double temperature,
                                  ZonedDateTime creationData){
-        try {
-            Constructor<Weather> constructor = Weather.class.getDeclaredConstructor(
-                    ReflectionConstants.CONSTRUCTOR_PARAMETERS
-            );
-            constructor.setAccessible(true);
-            return constructor.newInstance(
-                    getUUIDFromNameRegion(nameRegion), nameRegion, temperature, creationData
-            );
-        } catch (InvocationTargetException | NoSuchMethodException
-                 | InstantiationException | IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
 
+        return new Weather(getUUIDFromNameRegion(nameRegion),
+                nameRegion, temperature, creationData);
     }
     /**
      * Setter имени региона (идентификатор также изменяется)
      * */
     public void setWeatherNameRegion(Weather weather, String nameRegion){
-        try {
-            Field uuidWeather = weather.getClass().getDeclaredField(ReflectionConstants.UUID_FIELD);
-            Field nameRegionWeather = Weather.class.getDeclaredField(ReflectionConstants.NAME_REGION_FIELD);
-            uuidWeather.setAccessible(true);
-            nameRegionWeather.setAccessible(true);
-            uuidWeather.set(weather, getUUIDFromNameRegion(nameRegion));
-            nameRegionWeather.set(weather, nameRegion);
-        } catch (NoSuchFieldException | IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
-
+        weather.setNameRegion(nameRegion);
+        weather.setUuid(getUUIDFromNameRegion(nameRegion));
     }
     /**
      * Определение идентификатора по имени региона (утилитарный метод)
@@ -66,5 +44,14 @@ public class FactoryWeather {
             mapId.put(nameRegion, uuid);
         }
         return uuid;
+    }
+    /**
+     * Реализация паттерна Singleton с ленивой инициализацией и без проблем с многопоточностью
+     * */
+    private static class FactoryWeatherHolder {
+        private final static FactoryWeather INSTANCE = new FactoryWeather();
+    }
+    public static FactoryWeather getInstance(){
+        return FactoryWeatherHolder.INSTANCE;
     }
 }
