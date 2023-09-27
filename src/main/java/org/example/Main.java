@@ -9,7 +9,7 @@ import java.util.UUID;
 
 public class Main {
     public static void main(String[] args) {
-        FactoryWeather factoryWeather = new FactoryWeather();
+        FactoryWeather factoryWeather = FactoryWeather.getInstance();
         Weather weather = factoryWeather.createWeather("Volgograd", 12.2, ZonedDateTime.now());
         Weather weather2 = factoryWeather.createWeather("Volgograd", 13.2, ZonedDateTime.now());
         Weather weather3 = factoryWeather.createWeather("Spb", 13.2, ZonedDateTime.now());

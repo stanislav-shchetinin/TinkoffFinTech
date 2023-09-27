@@ -1,16 +1,18 @@
 package weather;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 import java.time.ZonedDateTime;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.UUID;
-
 public class FactoryWeather {
     /**
      * Ключ - имя города, значение - его идентифиактор
      * */
     private final Map<String, UUID> mapId;
-    public FactoryWeather(){
+    private FactoryWeather(){
         mapId = new TreeMap<>();
     }
     /**
@@ -42,5 +44,14 @@ public class FactoryWeather {
             mapId.put(nameRegion, uuid);
         }
         return uuid;
+    }
+    /**
+     * Реализация паттерна Singleton с ленивой инициализацией и без проблем с многопоточностью
+     * */
+    private static class FactoryWeatherHolder {
+        private final static FactoryWeather INSTANCE = new FactoryWeather();
+    }
+    public static FactoryWeather getInstance(){
+        return FactoryWeatherHolder.INSTANCE;
     }
 }
