@@ -5,6 +5,7 @@ import weather.Weather;
 import weather.WrapperListWeather;
 
 import java.time.ZonedDateTime;
+import java.util.UUID;
 
 public class Main {
     public static void main(String[] args) {

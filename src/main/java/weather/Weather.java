@@ -12,12 +12,13 @@ import java.util.UUID;
  * */
 @Getter
 @ToString
-@AllArgsConstructor(access=AccessLevel.PACKAGE)
+@AllArgsConstructor(access = AccessLevel.PACKAGE)
 public class Weather {
     /**
      * <p>Не стоит использовать Setter uuid напрямую из Weather, т.к. это может сломать связь nameRegion -- uuid</p>
      * <p>Поля устанавливается при вызове setter nameRegion в FactoryWeather</p>
      * */
+    @Setter(value = AccessLevel.PACKAGE)
     private UUID uuid;
     /**
      * <p>Не стоит использовать Setter напрямую из Weather, т.к. в нем не реализована смена uuid</p>
@@ -29,5 +30,4 @@ public class Weather {
     private Double temperature;
     @Setter
     private ZonedDateTime creationDate;
-
 }
