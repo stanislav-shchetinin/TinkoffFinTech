@@ -15,13 +15,13 @@ import java.util.UUID;
 @AllArgsConstructor(access=AccessLevel.PACKAGE)
 public class Weather {
     /**
-     * <p>Setter этого поля отсутсвует, т.к. идентификатор зависит от nameRegion</p>
-     * Устанавливается в конструкторе, т.к. значение поля uuid задает, пораждающая фабрика
+     * <p>Не стоит использовать Setter uuid напрямую из Weather, т.к. это может сломать связь nameRegion -- uuid</p>
+     * <p>Поля устанавливается при вызове setter nameRegion в FactoryWeather</p>
      * */
     private UUID uuid;
     /**
-     * <p>Setter поля nameRegion реалиозован в FactoryWeather, который порадил этот объект</p>
      * <p>Не стоит использовать Setter напрямую из Weather, т.к. в нем не реализована смена uuid</p>
+     * <p>Setter поля nameRegion реалиозован в FactoryWeather, который порадил этот объект</p>
      * */
     @Setter(value = AccessLevel.PACKAGE)
     private String nameRegion;
