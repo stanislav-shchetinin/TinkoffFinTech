@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import weather.Weather;
 
 import java.util.*;
+import java.util.stream.Collectors;
+
 @AllArgsConstructor
 public class WrapperListWeather{
     private List<Weather> weatherList;
@@ -29,19 +31,14 @@ public class WrapperListWeather{
     }
 
     public Map<UUID, List<Double>> toMapUUIDListTemperatures(){
-        Map<UUID, List<Double>> result = new HashMap<>();
-        weatherList.forEach(weather -> result.computeIfAbsent(
-                weather.getUuid(), k -> new ArrayList<>()).add(weather.getTemperature())
-        );
-        return result;
+        return weatherList.stream()
+                .collect(Collectors.groupingBy(Weather::getUuid,
+                        Collectors.mapping(Weather::getTemperature, Collectors.toList())));
     }
 
     public Map<Double, List<Weather>> toMapDoubleListWeather(){
-        Map<Double, List<Weather>> result = new HashMap<>();
-        weatherList.forEach(weather ->  result.computeIfAbsent(
-                weather.getTemperature(), k -> new ArrayList<>()).add(weather)
-        );
-        return result;
+        return weatherList.stream()
+                .collect(Collectors.groupingBy(Weather::getTemperature));
     }
 
 }
