@@ -1,12 +1,14 @@
 package wrapper;
 
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 import weather.Weather;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 @AllArgsConstructor
+@Component
 public class WrapperListWeather{
     private List<Weather> weatherList;
     public WrapperListWeather(){

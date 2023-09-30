@@ -1,6 +1,7 @@
 package wrapper;
 
 import lombok.Getter;
+import org.springframework.stereotype.Component;
 import requests.CoordinatesWeatherRequest;
 import weather.Weather;
 
@@ -10,6 +11,7 @@ import java.util.HashMap;
  * Класс-обертка для HashMap, из которого за O(1) получаем ответ на GET запрос
  * */
 @Getter
+@Component
 public class WrapperMapCityWeather {
     private final HashMap<CoordinatesWeatherRequest, Double> hashMap;
     public WrapperMapCityWeather(){

@@ -1,9 +1,11 @@
 package wrapper;
 
 import lombok.Getter;
+import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
 @Getter
+@Component
 public class WrapperSetDelete {
     private final HashSet<String> setDeleteRegion;
 
