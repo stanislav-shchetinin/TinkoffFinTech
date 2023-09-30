@@ -1,4 +1,4 @@
-package com.example.controllers;
+package controllers;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -6,8 +6,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/weather/{city}")
 public class WeatherCityController {
     @GetMapping
-    public Double getTemperatureByDate(@RequestParam("date") String stringDate,
-                                       @PathVariable String city){
+    public Double getTemperatureByDate(@PathVariable String city){
         return 0.;
     }
 }

@@ -1,4 +1,4 @@
-package weather;
+package wrapper;
 
 import lombok.AllArgsConstructor;
 import weather.Weather;
