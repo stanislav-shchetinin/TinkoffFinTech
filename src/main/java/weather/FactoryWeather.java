@@ -2,17 +2,20 @@ package weather;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.time.ZonedDateTime;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.UUID;
+
+@Component
 public class FactoryWeather {
     /**
      * Ключ - имя города, значение - его идентифиактор
      * */
     private final Map<String, UUID> mapId;
-    private FactoryWeather(){
+    public FactoryWeather(){
         mapId = new TreeMap<>();
     }
     /**
