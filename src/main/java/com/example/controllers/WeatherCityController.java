@@ -35,6 +35,7 @@ public class WeatherCityController {
     @PostMapping
     public void postWeather(@PathVariable String city,
                             @RequestBody WeatherLiteRequest weatherLite){
+        mainWrapper.getSetDelete().removeRegion(city);
         mainWrapper.add(
                 factoryWeather.createWeather(city, weatherLite.getTemperature(), weatherLite.getCreationDate())
         );
@@ -42,13 +43,14 @@ public class WeatherCityController {
     @PutMapping
     public void putWeather(@PathVariable String city,
                             @RequestBody WeatherLiteRequest weatherLite){
+        mainWrapper.getSetDelete().removeRegion(city);
         mainWrapper.update(
                 factoryWeather.createWeather(city, weatherLite.getTemperature(), weatherLite.getCreationDate())
         );
     }
     @DeleteMapping
     public void deleteWeather(@PathVariable String city){
-        //mainWrapper.getSetDelete().addRegion(city);
+        mainWrapper.getSetDelete().addRegion(city);
     }
 
 }
