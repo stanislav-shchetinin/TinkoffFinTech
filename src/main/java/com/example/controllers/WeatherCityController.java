@@ -1,7 +1,6 @@
 package com.example.controllers;
 
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.example.requests.WeatherLiteRequest;
 import com.example.weather.FactoryWeather;
@@ -17,6 +16,12 @@ public class WeatherCityController {
     private final MainWrapper mainWrapper;
     private final FactoryWeather factoryWeather;
 
+    /**
+     * В качестве аргумента метод получает доту (без времени)
+     * И выдает по ней температуру.
+     * Если на заданую дату было несколько Weather с разным временем, то берется
+     * последнее добавленное
+     * */
     @GetMapping
     public Double getTemperatureByDate(@PathVariable String city,
                                        @RequestParam String date){
