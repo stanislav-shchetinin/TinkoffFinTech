@@ -16,8 +16,8 @@ public class MainWrapper {
         listWeather.add(weather);
         mapCityWeather.add(weather);
     }
-    public void deleteRegion(String nameRegion){
-        setDelete.addRegion(nameRegion);
+    public boolean deleteRegion(String nameRegion){
+        return setDelete.addRegion(nameRegion);
     }
     public void update(Weather weather){
         //Метод add для mapCityWeather = метод put для HashMap (в случае существования)
