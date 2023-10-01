@@ -39,7 +39,13 @@ public class WeatherCityController {
                 factoryWeather.createWeather(city, weatherLite.getTemperature(), weatherLite.getCreationDate())
         );
     }
-    //Проблема с PUT, т.к. придется обновлять значение в List
+    @PutMapping
+    public void putWeather(@PathVariable String city,
+                            @RequestBody WeatherLiteRequest weatherLite){
+        mainWrapper.update(
+                factoryWeather.createWeather(city, weatherLite.getTemperature(), weatherLite.getCreationDate())
+        );
+    }
     @DeleteMapping
     public void deleteWeather(@PathVariable String city){
         //mainWrapper.getSetDelete().addRegion(city);

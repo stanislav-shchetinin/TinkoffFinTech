@@ -1,5 +1,6 @@
 package com.example.wrapper;
 
+import com.example.requests.WeatherLiteRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import com.example.weather.Weather;
@@ -18,5 +19,16 @@ public class MainWrapper {
     }
     public void deleteRegion(String nameRegion){
         setDelete.addRegion(nameRegion);
+    }
+    public void update(Weather weather){
+        //Метод add для mapCityWeather = метод put для HashMap (в случае существования)
+        //произойдет обновление
+        mapCityWeather.add(weather);
+        //узкое место в программе, т.к. обновление происходит за O(n)
+        //В запросах List не используется, поэтому если удалить эту строчку, то ничего не сломается
+        //Если этот List в дальнейшем будет использован в запросах, то я его перепишу на HashSet
+        //тогда запрос будет выполняться за O(1)
+        //если же использоваться не будет, то просто удалю ради оптимизации ресурсопотребления
+        listWeather.update(weather);
     }
 }
