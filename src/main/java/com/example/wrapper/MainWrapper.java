@@ -1,6 +1,5 @@
 package com.example.wrapper;
 
-import com.example.requests.WeatherLiteRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import com.example.weather.Weather;

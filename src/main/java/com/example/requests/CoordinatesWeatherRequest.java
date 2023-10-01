@@ -5,7 +5,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import java.time.LocalDate;
-import java.time.ZonedDateTime;
 
 /**
  * Класс для объединения данных для GET запроса.

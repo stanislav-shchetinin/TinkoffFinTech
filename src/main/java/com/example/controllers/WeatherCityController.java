@@ -1,6 +1,5 @@
 package com.example.controllers;
 
-import com.example.requests.CoordinatesWeatherRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.example.requests.WeatherLiteRequest;
@@ -8,8 +7,6 @@ import com.example.weather.FactoryWeather;
 import com.example.wrapper.MainWrapper;
 
 import java.time.LocalDate;
-import java.time.ZonedDateTime;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/weather/{city}")

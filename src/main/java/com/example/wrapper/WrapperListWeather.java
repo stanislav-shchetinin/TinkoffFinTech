@@ -1,6 +1,5 @@
 package com.example.wrapper;
 
-import com.example.requests.CoordinatesWeatherRequest;
 import lombok.AllArgsConstructor;
 import com.example.weather.Weather;
 import org.springframework.stereotype.Component;
