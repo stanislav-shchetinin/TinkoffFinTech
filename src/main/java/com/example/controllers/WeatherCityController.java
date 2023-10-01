@@ -1,5 +1,6 @@
 package com.example.controllers;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.example.requests.WeatherLiteRequest;
@@ -10,15 +11,12 @@ import java.time.LocalDate;
 
 @RestController
 @RequestMapping("/api/weather/{city}")
+@AllArgsConstructor
 public class WeatherCityController {
 
     private final MainWrapper mainWrapper;
     private final FactoryWeather factoryWeather;
-    @Autowired
-    public WeatherCityController(MainWrapper mainWrapper, FactoryWeather factoryWeather){
-        this.mainWrapper = mainWrapper;
-        this.factoryWeather = factoryWeather;
-    }
+
     @GetMapping
     public Double getTemperatureByDate(@PathVariable String city,
                                        @RequestParam String date){
@@ -45,6 +43,11 @@ public class WeatherCityController {
                 factoryWeather.createWeather(city, weatherLite.getTemperature(), weatherLite.getCreationDate())
         );
     }
+    /**
+     * Удаление не происходит напрямую. Удаленный элемент помещается в set (с этого для пользователя он удален)
+     * Если элемент нужно вернуть из этого сета он возвращается (отсюда некоторые проблемы с неймингом методов)
+     * Удаление за O(1)
+     * */
     @DeleteMapping
     public void deleteWeather(@PathVariable String city){
         mainWrapper.getSetDelete().addRegion(city);
