@@ -1,4 +1,4 @@
-package wrapper;
+package com.example.wrapper;
 
 import lombok.Getter;
 import org.springframework.stereotype.Component;

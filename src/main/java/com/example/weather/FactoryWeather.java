@@ -1,14 +1,13 @@
-package weather;
+package com.example.weather;
 
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
+import org.springframework.cglib.core.internal.LoadingCache;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.UUID;
-
 @Component
 public class FactoryWeather {
     /**
@@ -23,7 +22,7 @@ public class FactoryWeather {
      * */
     public Weather createWeather(String nameRegion,
                                  Double temperature,
-                                 ZonedDateTime creationData){
+                                 LocalDateTime creationData){
 
         return new Weather(getUUIDFromNameRegion(nameRegion),
                 nameRegion, temperature, creationData);
@@ -47,14 +46,5 @@ public class FactoryWeather {
             mapId.put(nameRegion, uuid);
         }
         return uuid;
-    }
-    /**
-     * Реализация паттерна Singleton с ленивой инициализацией и без проблем с многопоточностью
-     * */
-    private static class FactoryWeatherHolder {
-        private final static FactoryWeather INSTANCE = new FactoryWeather();
-    }
-    public static FactoryWeather getInstance(){
-        return FactoryWeatherHolder.INSTANCE;
     }
 }

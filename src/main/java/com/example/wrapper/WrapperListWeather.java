@@ -1,8 +1,8 @@
-package wrapper;
+package com.example.wrapper;
 
 import lombok.AllArgsConstructor;
+import com.example.weather.Weather;
 import org.springframework.stereotype.Component;
-import weather.Weather;
 
 import java.util.*;
 import java.util.stream.Collectors;

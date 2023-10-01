@@ -1,7 +1,8 @@
-package weather;
+package com.example.weather;
 
 import lombok.*;
-import java.time.ZonedDateTime;
+
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 /**
@@ -29,5 +30,5 @@ public class Weather {
     @Setter
     private Double temperature;
     @Setter
-    private ZonedDateTime creationDate;
+    private LocalDateTime creationDate;
 }

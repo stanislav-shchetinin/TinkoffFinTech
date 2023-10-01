@@ -1,8 +1,10 @@
-package requests;
+package com.example.requests;
 
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
+import java.time.LocalDate;
 import java.time.ZonedDateTime;
 
 /**
@@ -12,7 +14,8 @@ import java.time.ZonedDateTime;
  * */
 @Getter
 @AllArgsConstructor
+@EqualsAndHashCode
 public class CoordinatesWeatherRequest {
     private String nameRegion;
-    private ZonedDateTime creationDate;
+    private LocalDate creationDate;
 }

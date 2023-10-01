@@ -1,10 +1,11 @@
-package wrapper;
+package com.example.wrapper;
 
+import com.example.requests.CoordinatesWeatherRequest;
+import com.example.weather.Weather;
 import lombok.Getter;
 import org.springframework.stereotype.Component;
-import requests.CoordinatesWeatherRequest;
-import weather.Weather;
 
+import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.util.HashMap;
 
@@ -13,16 +14,20 @@ import java.util.HashMap;
  * */
 @Component
 public class WrapperMapCityWeather {
+    @Getter
     private final HashMap<CoordinatesWeatherRequest, Double> hashMap;
     public WrapperMapCityWeather(){
         hashMap = new HashMap<>();
     }
     public void add(Weather weather){
         hashMap.put( new CoordinatesWeatherRequest(
-                weather.getNameRegion(), weather.getCreationDate()),
+                weather.getNameRegion(), weather.getCreationDate().toLocalDate()),
                 weather.getTemperature());
     }
-    public Double get(String nameRegion, ZonedDateTime zonedDateTime){
-        return hashMap.get(new CoordinatesWeatherRequest(nameRegion, zonedDateTime));
+    public Double get(String nameRegion, LocalDate localDate){
+        return hashMap.get(new CoordinatesWeatherRequest(nameRegion, localDate));
+    }
+    public boolean isInMap(String nameRegion, LocalDate localDate){
+        return hashMap.containsKey(new CoordinatesWeatherRequest(nameRegion, localDate));
     }
 }

@@ -1,9 +1,11 @@
-package requests;
+package com.example.requests;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 
 /**
@@ -13,5 +15,5 @@ import java.time.ZonedDateTime;
 @AllArgsConstructor
 public class WeatherLiteRequest {
     private Double temperature;
-    private ZonedDateTime creationDate;
+    private LocalDateTime creationDate;
 }
