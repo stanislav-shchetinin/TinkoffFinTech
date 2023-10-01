@@ -1,12 +1,14 @@
-package weather;
+package com.example.wrapper;
 
 import lombok.AllArgsConstructor;
-import weather.Weather;
+import com.example.weather.Weather;
+import org.springframework.stereotype.Component;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 @AllArgsConstructor
+@Component
 public class WrapperListWeather{
     private List<Weather> weatherList;
     public WrapperListWeather(){
@@ -14,6 +16,19 @@ public class WrapperListWeather{
     }
     public void add(Weather weather){
         weatherList.add(weather);
+    }
+    /**
+     * Метод находит объект Weather в List с таким же именем региона и такими же датой и временем
+     * и обновляет остальные данные путём переприсваивания
+     * */
+    public void update(Weather weather){
+        for (Weather curWeather : weatherList) {
+            if (curWeather.getNameRegion().equals(weather.getNameRegion())
+                    && curWeather.getCreationDate().equals(weather.getCreationDate())) {
+                curWeather = weather;
+                break;
+            }
+        }
     }
     public void addAll(ArrayList<Weather> arrayList){
         weatherList.addAll(arrayList);
