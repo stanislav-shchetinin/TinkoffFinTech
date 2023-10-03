@@ -35,8 +35,7 @@ public class WeatherCityController {
     )
     @GetMapping
     public ResponseGetTemperature getTemperatureByDate(@PathVariable String city,
-                                                                       @RequestParam String date){
-        LocalDate localDate = LocalDate.parse(date);
+                                                                       @RequestParam LocalDate localDate){
         if (weatherCityService.isEntryInBase(city, localDate)){
             return new ResponseGetTemperature(HttpStatus.OK.value(),
                     "OK",
