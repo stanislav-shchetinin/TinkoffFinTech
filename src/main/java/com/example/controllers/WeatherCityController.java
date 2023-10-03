@@ -7,11 +7,9 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.example.requests.WeatherLiteRequest;
-import com.example.weather.FactoryWeather;
-import com.example.wrapper.MainWrapper;
+import com.example.services.WeatherCityService;
 
 import java.time.LocalDate;
 
@@ -23,8 +21,7 @@ import java.time.LocalDate;
                 "удаления региона")
 public class WeatherCityController {
 
-    private final MainWrapper mainWrapper;
-    private final FactoryWeather factoryWeather;
+    private final WeatherCityService weatherCityService;
 
     /**
      * В качестве аргумента метод получает доту (без времени)
@@ -40,11 +37,10 @@ public class WeatherCityController {
     public ResponseGetTemperature getTemperatureByDate(@PathVariable String city,
                                                                        @RequestParam String date){
         LocalDate localDate = LocalDate.parse(date);
-        if (!mainWrapper.getSetDelete().isInSet(city) &&
-                mainWrapper.getMapCityWeather().isInMap(city, localDate)){
+        if (weatherCityService.isEntryInBase(city, localDate)){
             return new ResponseGetTemperature(HttpStatus.OK.value(),
                     "OK",
-                    mainWrapper.getMapCityWeather().get(city, localDate));
+                    weatherCityService.getTemperature(city, localDate));
         }
         throw new NotFoundException(String.format("Регион %s не найден", city));
     }
@@ -55,10 +51,7 @@ public class WeatherCityController {
     @PostMapping
     public Response postWeather(@PathVariable String city,
                             @RequestBody WeatherLiteRequest weatherLite){
-        mainWrapper.getSetDelete().removeRegion(city);
-        mainWrapper.add(
-                factoryWeather.createWeather(city, weatherLite.getTemperature(), weatherLite.getCreationDate())
-        );
+        weatherCityService.add(city, weatherLite);
         return new Response(HttpStatus.OK.value(), "OK");
     }
     @Operation(
@@ -68,10 +61,7 @@ public class WeatherCityController {
     @PutMapping
     public Response putWeather(@PathVariable String city,
                             @RequestBody WeatherLiteRequest weatherLite){
-        mainWrapper.getSetDelete().removeRegion(city);
-        mainWrapper.update(
-                factoryWeather.createWeather(city, weatherLite.getTemperature(), weatherLite.getCreationDate())
-        );
+        weatherCityService.update(city, weatherLite);
         return new Response(HttpStatus.OK.value(), "OK");
     }
     /**
@@ -85,7 +75,7 @@ public class WeatherCityController {
     )
     @DeleteMapping
     public Response deleteWeather(@PathVariable String city){
-        mainWrapper.getSetDelete().addRegion(city);
+        weatherCityService.deleteRegion(city);
         return new Response(HttpStatus.OK.value(), "OK");
     }
 
