@@ -47,21 +47,21 @@ public class WeatherCityController {
             summary = "Опубликовать погоду",
             description = "Позволяет добавить погоду в базу"
     )
+    @ResponseStatus(value = HttpStatus.OK)
     @PostMapping
-    public Response postWeather(@PathVariable String city,
+    public void postWeather(@PathVariable String city,
                             @RequestBody WeatherLiteRequest weatherLite){
         weatherCityService.add(city, weatherLite);
-        return new Response(HttpStatus.OK.value(), "OK");
     }
     @Operation(
             summary = "Обновить погоду",
             description = "Позволяет обновить погоду в базе"
     )
+    @ResponseStatus(value = HttpStatus.OK)
     @PutMapping
-    public Response putWeather(@PathVariable String city,
+    public void putWeather(@PathVariable String city,
                             @RequestBody WeatherLiteRequest weatherLite){
         weatherCityService.update(city, weatherLite);
-        return new Response(HttpStatus.OK.value(), "OK");
     }
     /**
      * Удаление не происходит напрямую. Удаленный элемент помещается в set (с этого для пользователя он удален)
@@ -72,10 +72,10 @@ public class WeatherCityController {
             summary = "Удаление региона",
             description = "Удаляет регион и все связанные с ним записи"
     )
+    @ResponseStatus(value = HttpStatus.OK)
     @DeleteMapping
-    public Response deleteWeather(@PathVariable String city){
+    public void deleteWeather(@PathVariable String city){
         weatherCityService.deleteRegion(city);
-        return new Response(HttpStatus.OK.value(), "OK");
     }
 
 }
