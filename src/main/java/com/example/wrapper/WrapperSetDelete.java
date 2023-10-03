@@ -3,9 +3,11 @@ package com.example.wrapper;
 import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
+import java.util.Set;
+
 @Component
 public class WrapperSetDelete {
-    private final HashSet<String> setDeleteRegion;
+    private final Set<String> setDeleteRegion;
 
     public WrapperSetDelete(){
         setDeleteRegion = new HashSet<>();

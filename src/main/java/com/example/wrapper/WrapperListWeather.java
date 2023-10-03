@@ -30,7 +30,7 @@ public class WrapperListWeather{
             }
         }
     }
-    public void addAll(ArrayList<Weather> arrayList){
+    public void addAll(List<Weather> arrayList){
         weatherList.addAll(arrayList);
     }
     public Double averageTemperatureValue(){

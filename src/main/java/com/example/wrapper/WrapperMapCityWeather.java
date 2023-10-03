@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Класс-обертка для HashMap, из которого за O(1) получаем ответ на GET запрос
@@ -14,7 +15,7 @@ import java.util.HashMap;
 @Component
 public class WrapperMapCityWeather {
     @Getter
-    private final HashMap<CoordinatesWeatherRequest, Double> hashMap;
+    private final Map<CoordinatesWeatherRequest, Double> hashMap;
     public WrapperMapCityWeather(){
         hashMap = new HashMap<>();
     }
