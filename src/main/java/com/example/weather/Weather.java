@@ -13,6 +13,7 @@ import java.util.UUID;
  * */
 @Getter
 @ToString
+@EqualsAndHashCode
 @AllArgsConstructor(access = AccessLevel.PACKAGE)
 public class Weather {
     /**
