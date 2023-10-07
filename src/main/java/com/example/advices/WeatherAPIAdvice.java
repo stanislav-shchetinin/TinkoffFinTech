@@ -1,2 +1,25 @@
-package com.example.advices;public class WeatherAPIAdvice {
+package com.example.advices;
+
+import com.example.exceptions.NotFoundException;
+import com.example.exceptions.WeatherAPIClientException;
+import com.example.exceptions.WeatherAPIServerException;
+import com.example.response.Response;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+@ControllerAdvice
+public class WeatherAPIAdvice {
+    @ExceptionHandler(WeatherAPIServerException.class)
+    public ResponseEntity<Response> handleException(WeatherAPIServerException e) {
+        return new ResponseEntity<>(new Response(HttpStatus.INTERNAL_SERVER_ERROR.value(), e.getMessage()),
+                HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(WeatherAPIClientException.class)
+    public ResponseEntity<Response> handleException(WeatherAPIClientException e) {
+        return new ResponseEntity<>(new Response(HttpStatus.BAD_REQUEST.value(), e.getMessage()),
+                HttpStatus.BAD_REQUEST);
+    }
 }
