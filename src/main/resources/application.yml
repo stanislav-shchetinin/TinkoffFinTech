@@ -1,0 +1,5 @@
+resilience4j.ratelimiter:
+  instances:
+    weatherAPIService:
+      limitForPeriod: 4
+      limitRefreshPeriod: 10s
