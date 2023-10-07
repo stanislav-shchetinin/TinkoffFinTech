@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import com.example.requests.WeatherLiteRequest;
@@ -18,7 +19,7 @@ import java.time.LocalDate;
 
 @RestController
 @RequestMapping("/api/weather/{city}")
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Tag(name="WeatherCityController",
         description="Контроллер методов получения температуры, загрузки/обновления погоды," +
                 "удаления региона")
