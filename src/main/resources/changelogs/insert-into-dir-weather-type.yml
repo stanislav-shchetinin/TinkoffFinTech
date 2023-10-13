@@ -1,0 +1,46 @@
+databaseChangeLog:
+  -  changeSet:
+       author: Stas
+       changes:
+         - insert:
+             tableName: dir_weather_type
+             columns:
+               - column:
+                   name: weather_type
+                   value: "cloudy"
+         - insert:
+             tableName: dir_weather_type
+             columns:
+               - column:
+                   name: weather_type
+                   value: "sunny"
+         - insert:
+             tableName: dir_weather_type
+             columns:
+               - column:
+                   name: weather_type
+                   value: "windy"
+         - insert:
+             tableName: dir_weather_type
+             columns:
+               - column:
+                   name: weather_type
+                   value: "snowy"
+         - insert:
+             tableName: dir_weather_type
+             columns:
+               - column:
+                   name: weather_type
+                   value: "foggy"
+         - insert:
+             tableName: dir_weather_type
+             columns:
+               - column:
+                   name: weather_type
+                   value: "rainy"
+         - insert:
+             tableName: dir_weather_type
+             columns:
+               - column:
+                   name: weather_type
+                   value: "hot"

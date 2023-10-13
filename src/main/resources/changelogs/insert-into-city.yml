@@ -1,0 +1,6809 @@
+databaseChangeLog:
+  -  changeSet:
+       id: insert-into-city
+       author: Stas
+       changes:
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Абаза"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Абакан"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Абдулино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Абинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Агидель"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Агрыз"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Адыгейск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Азнакаево"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Азов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ак-Довурак"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Аксай"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Алагир"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Алапаевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Алатырь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Алдан"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Алейск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Александров"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Александровск-Сахалинский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Александровск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Алексеевка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Алексин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Алзамай"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Алупка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Алушта"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Альметьевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Амурск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Анадырь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Анапа"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ангарск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Андреаполь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Анжеро-Судженск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Анива"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Апатиты"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Апрелевка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Апшеронск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Арамиль"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Аргун"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ардатов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ардон"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Арзамас"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Аркадак"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Армавир"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Армянск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Арсеньев"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Арск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Артём"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Артёмовск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Артёмовский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Архангельск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Асбест"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Асино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Астрахань"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Аткарск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ахтубинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ачинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ачхой-Мартан"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Аша"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бабаево"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бабушкин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бавлы"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Багратионовск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Байкальск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Баймак"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бакал"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Баксан"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Балабаново"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Балаклава"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Балаково"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Балахна"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Балашиха"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Балашов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Балей"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Балтийск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Барабинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Барнаул"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Барыш"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Батайск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бахчисарай"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бежецк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белая Калитва"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белая Холуница"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белгород"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белебей"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белинский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белогорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белогорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белозерск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белокуриха"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Беломорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белоозёрский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белорецк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белореченск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белоусово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белоярский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белый"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Белёв"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бердск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Березники"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Берёзовский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Берёзовский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Беслан"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бийск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бикин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Билибино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Биробиджан"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бирск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бирюсинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бирюч"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Благовещенск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Благовещенск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Благодарный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бобров"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Богданович"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Богородицк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Богородск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Боготол"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Богучар"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бодайбо"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бокситогорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Болгар"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бологое"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Болотное"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Болохово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Болхов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Большой Камень"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бор"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Борзя"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Борисоглебск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Боровичи"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Боровск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бородино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Братск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бронницы"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Брянск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бугульма"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бугуруслан"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Будённовск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бузулук"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Буинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Буй"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Буйнакск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Бутурлиновка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Валдай"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Валуйки"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Велиж"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Великие Луки"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Великий Новгород"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Великий Устюг"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Вельск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Венёв"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Верещагино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Верея"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Верхнеуральск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Верхний Тагил"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Верхний Уфалей"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Верхняя Пышма"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Верхняя Салда"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Верхняя Тура"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Верхотурье"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Верхоянск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Весьегонск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ветлуга"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Видное"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Вилюйск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Вилючинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Вихоревка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Вичуга"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Владивосток"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Владикавказ"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Владимир"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Волгоград"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Волгодонск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Волгореченск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Волжск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Волжский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Вологда"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Володарск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Волоколамск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Волосово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Волхов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Волчанск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Вольск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Воркута"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Воронеж"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ворсма"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Воскресенск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Воткинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Всеволожск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Вуктыл"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Выборг"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Выкса"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Высоковск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Высоцк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Вытегра"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Вышний Волочёк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Вяземский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Вязники"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Вязьма"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Вятские Поляны"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гаврилов Посад"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гаврилов-Ям"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гагарин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гаджиево"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гай"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Галич"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гатчина"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гвардейск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гдов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Геленджик"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Георгиевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Глазов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Голицыно"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Горбатов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Горно-Алтайск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Горнозаводск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Горняк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Городец"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Городище"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Городовиковск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гороховец"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Горячий Ключ"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Грайворон"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гремячинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Грозный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Грязи"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Грязовец"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Губаха"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Губкин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Губкинский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гудермес"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гуково"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гулькевичи"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гурьевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гурьевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гусев"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гусиноозёрск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Гусь-Хрустальный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Давлеканово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дагестанские Огни"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Далматово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дальнегорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дальнереченск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Данилов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Данков"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дегтярск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дедовск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Демидов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дербент"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Десногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Джанкой"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дзержинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дзержинский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дивногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дигора"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Димитровград"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дмитриев"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дмитров"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дмитровск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дно"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Добрянка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Долгопрудный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Долинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Домодедово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Донецк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Донской"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дорогобуж"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дрезна"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дубна"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дубовка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дудинка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Духовщина"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дюртюли"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Дятьково"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Евпатория"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Егорьевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ейск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Екатеринбург"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Елабуга"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Елец"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Елизово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ельня"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Еманжелинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Емва"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Енисейск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ермолино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ершов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ессентуки"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ефремов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Железноводск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Железногорск-Илимский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Железногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Железногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Жердевка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Жигулёвск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Жиздра"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Жирновск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Жуков"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Жуковка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Жуковский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Завитинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Заводоуковск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Заволжск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Заволжье"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Задонск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Заинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Закаменск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Заозёрный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Заозёрск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Западная Двина"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Заполярный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Зарайск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Заречный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Заречный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Заринск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Звенигово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Звенигород"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Зверево"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Зеленогорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Зеленогорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Зеленоград"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Зеленоградск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Зеленодольск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Зеленокумск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Зерноград"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Зея"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Зима"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Златоуст"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Злынка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Змеиногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Знаменск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Зубцов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Зуевка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ивангород"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Иваново"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ивантеевка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ивдель"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Игарка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ижевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Избербаш"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Изобильный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Иланский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Инза"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Инкерман"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Иннополис"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Инсар"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Инта"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ипатово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ирбит"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Иркутск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Исилькуль"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Искитим"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Истра"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ишим"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ишимбай"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Йошкар-Ола"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кадников"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Казань"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Калач-на-Дону"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Калач"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Калачинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Калининград"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Калининск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Калтан"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Калуга"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Калязин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Камбарка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Каменка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Каменногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Каменск-Уральский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Каменск-Шахтинский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Камень-на-Оби"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Камешково"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Камызяк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Камышин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Камышлов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Канаш"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кандалакша"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Канск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Карабаново"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Карабаш"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Карабулак"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Карасук"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Карачаевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Карачев"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Каргат"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Каргополь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Карпинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Карталы"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Касимов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Касли"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Каспийск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Катав-Ивановск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Катайск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Качканар"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кашин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кашира"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кедровый"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кемерово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кемь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Керчь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кизел"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кизилюрт"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кизляр"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кимовск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кимры"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кингисепп"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кинель"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кинешма"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Киреевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Киренск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Киржач"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кириллов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кириши"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Киров"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Киров"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кировград"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кирово-Чепецк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кировск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кировск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кирс"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кирсанов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Киселёвск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кисловодск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Клин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Клинцы"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Княгинино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ковдор"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ковров"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ковылкино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Когалым"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кодинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Козельск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Козловка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Козьмодемьянск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кола"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кологрив"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Коломна"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Колпашево"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Колпино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Колтуши"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кольчугино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Коммунар"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Комсомольск-на-Амуре"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Комсомольск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Конаково"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кондопога"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кондрово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Константиновск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Копейск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кораблино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кореновск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Коркино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Королёв"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Короча"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Корсаков"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Коряжма"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Костерёво"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Костомукша"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кострома"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Котельники"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Котельниково"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Котельнич"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Котлас"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Котово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Котовск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кохма"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Красавино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Красноармейск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Красноармейск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Красновишерск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Красногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Краснодар"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Красное Село"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Краснозаводск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Краснознаменск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Краснознаменск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Краснокаменск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Краснокамск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Красноперекопск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Краснослободск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Краснослободск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Краснотурьинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Красноуральск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Красноуфимск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Красноярск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Красный Кут"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Красный Сулин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Красный Холм"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кремёнки"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кронштадт"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кропоткин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Крымск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кстово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кубинка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кувандык"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кувшиново"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кудрово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кудымкар"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кузнецк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Куйбышев"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кукмор"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кулебаки"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кумертау"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кунгур"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Купино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Курган"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Курганинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Курильск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Курлово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Куровское"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Курск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Куртамыш"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Курчалой"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Курчатов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Куса"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кушва"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кызыл"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кыштым"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Кяхта"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лабинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лабытнанги"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лагань"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ладушкин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лаишево"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лакинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лангепас"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лахденпохья"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лебедянь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лениногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ленинск-Кузнецкий"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ленинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ленск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лермонтов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лесной"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лесозаводск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лесосибирск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ливны"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ликино-Дулёво"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Липецк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Липки"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лиски"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лихославль"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лобня"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лодейное Поле"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ломоносов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лосино-Петровский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Луга"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Луза"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лукоянов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Луховицы"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лысково"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лысьва"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лыткарино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Льгов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Любань"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Люберцы"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Любим"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Людиново"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Лянтор"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Магадан"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Магас"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Магнитогорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Майкоп"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Майский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Макаров"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Макарьев"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Макушино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Малая Вишера"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Малгобек"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Малмыж"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Малоархангельск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Малоярославец"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мамадыш"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мамоново"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мантурово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мариинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мариинский Посад"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Маркс"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Махачкала"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мглин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мегион"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Медвежьегорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Медногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Медынь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Межгорье"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Междуреченск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мезень"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Меленки"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мелеуз"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Менделеевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мензелинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мещовск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Миасс"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Микунь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Миллерово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Минеральные Воды"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Минусинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Миньяр"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мирный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мирный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Михайлов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Михайловка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Михайловск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Михайловск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мичуринск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Могоча"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Можайск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Можга"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Моздок"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мончегорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Морозовск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Моршанск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мосальск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Москва"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Московский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Муравленко"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мураши"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мурино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мурманск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Муром"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мценск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мыски"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мытищи"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Мышкин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Набережные Челны"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Навашино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Наволоки"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Надым"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Назарово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Назрань"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Называевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нальчик"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нариманов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Наро-Фоминск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нарткала"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нарьян-Мар"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Находка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Невель"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Невельск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Невинномысск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Невьянск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нелидово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Неман"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нерехта"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нерчинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нерюнгри"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нестеров"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нефтегорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нефтекамск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нефтекумск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нефтеюганск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нея"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нижневартовск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нижнекамск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нижнеудинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нижние Серги"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нижний Ломов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нижний Новгород"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нижний Тагил"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нижняя Салда"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нижняя Тура"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Николаевск-на-Амуре"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Николаевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Никольск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Никольск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Никольское"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новая Ладога"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новая Ляля"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новоалександровск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новоалтайск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новоаннинский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нововоронеж"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новодвинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новозыбков"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новокубанск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новокузнецк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новокуйбышевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новомичуринск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новомосковск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новопавловск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новоржев"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новороссийск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новосибирск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новосиль"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новосокольники"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новотроицк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новоузенск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новоульяновск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новоуральск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новохопёрск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новочебоксарск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новочеркасск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новошахтинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новый Оскол"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Новый Уренгой"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ногинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нолинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Норильск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ноябрьск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нурлат"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нытва"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нюрба"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нягань"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Нязепетровск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Няндома"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Облучье"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Обнинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Обоянь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Обь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Одинцово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Озёрск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Озёрск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Озёры"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Октябрьск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Октябрьский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Окуловка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Оленегорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Олонец"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Олёкминск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Омск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Омутнинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Онега"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Опочка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Оренбург"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Орехово-Зуево"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Орлов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Орск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Орёл"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Оса"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Осинники"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Осташков"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Остров"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Островной"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Острогожск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Отрадное"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Отрадный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Оха"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Оханск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Очёр"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Павлово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Павловск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Павловск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Павловский Посад"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Палласовка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Партизанск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Певек"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пенза"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Первомайск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Первоуральск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Перевоз"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пересвет"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Переславль-Залесский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пермь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пестово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Петергоф"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Петров Вал"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Петровск-Забайкальский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Петровск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Петрозаводск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Петропавловск-Камчатский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Петухово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Петушки"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Печора"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Печоры"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пикалёво"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пионерский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Питкяранта"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Плавск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пласт"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Плёс"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Поворино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Подольск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Подпорожье"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Покачи"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Покров"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Покровск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Полевской"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Полесск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Полысаево"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Полярные Зори"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Полярный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Поронайск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Порхов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Похвистнево"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Почеп"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Починок"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пошехонье"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Правдинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Приволжск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Приморск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Приморск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Приморско-Ахтарск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Приозерск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Прокопьевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пролетарск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Протвино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Прохладный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Псков"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пугачёв"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пудож"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пустошка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пучеж"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пушкин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пушкино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пущино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пыталово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пыть-Ях"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Пятигорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Радужный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Радужный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Райчихинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Раменское"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Рассказово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ревда"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Реж"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Реутов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ржев"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Родники"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Рославль"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Россошь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ростов-на-Дону"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ростов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Рошаль"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ртищево"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Рубцовск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Рудня"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Руза"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Рузаевка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Рыбинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Рыбное"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Рыльск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ряжск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Рязань"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Саки"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Салават"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Салаир"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Салехард"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сальск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Самара"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Санкт-Петербург"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Саранск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сарапул"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Саратов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Саров"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сасово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сатка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сафоново"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Саяногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Саянск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Светлогорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Светлоград"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Светлый"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Светогорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Свирск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Свободный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Себеж"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Севастополь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Северо-Курильск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Северобайкальск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Северодвинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Североморск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Североуральск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Северск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Севск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сегежа"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сельцо"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Семикаракорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Семилуки"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Семёнов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сенгилей"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Серафимович"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сергач"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сергиев Посад"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сердобск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Серов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Серпухов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сертолово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сестрорецк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сибай"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сим"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Симферополь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сковородино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Скопин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Славгород"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Славск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Славянск-на-Кубани"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сланцы"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Слободской"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Слюдянка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Смоленск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Снежинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Снежногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Собинка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Советск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Советск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Советск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Советская Гавань"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Советский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сокол"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Солигалич"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Соликамск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Солнечногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Соль-Илецк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сольвычегодск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сольцы"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сорочинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сортавала"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сосенский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сосновка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сосновоборск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сосновый Бор"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сосногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сочи"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Спас-Деменск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Спас-Клепики"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Спасск-Дальний"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Спасск-Рязанский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Спасск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Среднеколымск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Среднеуральск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сретенск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ставрополь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Старая Купавна"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Старая Русса"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Старица"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Стародуб"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Старый Крым"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Старый Оскол"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Стерлитамак"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Стрежевой"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Строитель"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Струнино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ступино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Суворов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Судак"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Суджа"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Судогда"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Суздаль"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сунжа"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Суоярви"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сураж"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сургут"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Суровикино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сурск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сусуман"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сухиничи"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сухой Лог"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сызрань"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сыктывкар"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сысерть"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сычёвка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Сясьстрой"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тавда"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Таганрог"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тайга"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тайшет"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Талдом"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Талица"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тамбов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тара"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тарко-Сале"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Таруса"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Татарск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Таштагол"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тверь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Теберда"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тейково"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Темников"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Темрюк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Терек"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тетюши"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тимашёвск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тихвин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тихорецк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тобольск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тогучин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тольятти"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Томари"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Томмот"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Томск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Топки"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Торжок"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Торопец"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тосно"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тотьма"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Троицк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Троицк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Трубчевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Трёхгорный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Туапсе"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Туймазы"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тула"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тулун"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Туран"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Туринск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тутаев"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тында"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тырныауз"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тюкалинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Тюмень"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Уварово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Углегорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Углич"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Удачный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Удомля"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ужур"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Узловая"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Улан-Удэ"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ульяновск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Унеча"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Урай"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Урень"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Уржум"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Урус-Мартан"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Урюпинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Усинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Усмань"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Усолье-Сибирское"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Усолье"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Уссурийск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Усть-Джегута"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Усть-Илимск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Усть-Катав"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Усть-Кут"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Усть-Лабинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Устюжна"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Уфа"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ухта"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Учалы"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Уяр"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Фатеж"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Феодосия"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Фокино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Фокино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Фролово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Фрязино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Фурманов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Хабаровск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Хадыженск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ханты-Мансийск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Харабали"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Харовск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Хасавюрт"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Хвалынск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Хилок"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Химки"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Холм"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Холмск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Хотьково"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Цивильск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Цимлянск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Циолковский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чадан"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чайковский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чапаевск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чаплыгин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чебаркуль"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чебоксары"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чегем"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чекалин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Челябинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чердынь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Черемхово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Черепаново"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Череповец"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Черкесск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Черноголовка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Черногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чернушка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Черняховск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чехов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чистополь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чита"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чкаловск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чудово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чулым"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чусовой"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чухлома"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Чёрмоз"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шагонар"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шадринск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шали"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шарыпово"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шарья"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шатура"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шахты"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шахунья"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шацк"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шебекино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шелехов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шенкурск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шилка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шимановск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шиханы"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шлиссельбург"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шумерля"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шумиха"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Шуя"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Щербинка"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Щигры"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Щучье"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Щёкино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Щёлкино"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Щёлково"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Электрогорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Электросталь"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Электроугли"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Элиста"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Энгельс"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Эртиль"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Югорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Южа"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Южно-Сахалинск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Южно-Сухокумск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Южноуральск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Юрга"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Юрьев-Польский"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Юрьевец"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Юрюзань"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Юхнов"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ядрин"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Якутск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ялта"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ялуторовск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Янаул"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Яранск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Яровое"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ярославль"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ярцево"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ясногорск"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Ясный"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
+                   value: "Яхрома"

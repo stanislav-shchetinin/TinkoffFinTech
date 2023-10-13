@@ -5,3 +5,5 @@ databaseChangeLog:
       file: classpath:changelogs/create-dir-weather-type.yml
   - include:
       file: classpath:changelogs/create-weather.yml
+  - include:
+      file: classpath:changelogs/insert-into-city.yml
