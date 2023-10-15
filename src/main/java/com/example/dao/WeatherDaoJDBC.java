@@ -20,19 +20,16 @@ public class WeatherDaoJDBC implements Dao<WeatherEntity> {
                           @Autowired WeatherEntityORM weatherEntityORM){
         this.h2DataSource = h2DataSource;
         this.weatherEntityORM = weatherEntityORM;
-        delete(1);
+        get(2);
     }
     @Override
     public Optional<WeatherEntity> get(int id) {
         try (PreparedStatement preparedStatement =
                      h2DataSource.getConnection().prepareStatement(String.format("select * from weather where id = %d", id))){
             ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()){
-                WeatherEntity weatherEntity = weatherEntityORM.mapResultSetToWeatherEntity(resultSet);
-                return Optional.ofNullable(weatherEntity);
-            } else {
-                return Optional.empty();
-            }
+            resultSet.next();
+            WeatherEntity weatherEntity = weatherEntityORM.mapResultSetToWeatherEntity(resultSet);
+            return Optional.ofNullable(weatherEntity);
         } catch (Exception e) {
             e.printStackTrace();
             return Optional.empty();
