@@ -1,6 +1,7 @@
 databaseChangeLog:
   -  changeSet:
        author: Stas
+       id: insert-into-weather-type
        changes:
          - insert:
              tableName: dir_weather_type
