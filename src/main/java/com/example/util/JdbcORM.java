@@ -16,10 +16,8 @@ public class JdbcORM<T> {
 
         for (int i = 0; i < clazz.getDeclaredFields().length; ++i){
             Field field = clazz.getDeclaredFields()[i];
-            field.setAccessible(true);
-            field.set(obj, resultSet.getObject(i + 1));
-            /*Method setter = setterFromField(field);
-            setter.invoke(obj, resultSet.getObject(i + 1));*/
+            Method setter = setterFromField(field);
+            setter.invoke(obj, resultSet.getObject(i + 1));
         }
 
         return obj;

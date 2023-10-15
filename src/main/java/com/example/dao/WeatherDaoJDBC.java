@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,7 +25,6 @@ public class WeatherDaoJDBC implements Dao<WeatherEntity> {
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()){
                 WeatherEntity weatherEntity = WeatherEntityORM.mapResultSetToWeatherEntity(resultSet);
-                System.out.println(weatherEntity);
                 return Optional.ofNullable(weatherEntity);
             } else {
                 return Optional.empty();
