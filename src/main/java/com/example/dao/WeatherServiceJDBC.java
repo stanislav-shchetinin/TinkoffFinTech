@@ -6,21 +6,20 @@ import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Date;
 import java.util.Optional;
 
-@Component
-public class WeatherDaoJDBC implements Dao<WeatherEntity> {
+@Service
+public class WeatherServiceJDBC implements Dao<WeatherEntity> {
     private final HikariDataSource h2DataSource;
     private final WeatherEntityORM weatherEntityORM;
-    public WeatherDaoJDBC(@Qualifier("h2-jdbc") HikariDataSource h2DataSource,
-                          @Autowired WeatherEntityORM weatherEntityORM){
+    public WeatherServiceJDBC(@Qualifier("h2-jdbc") HikariDataSource h2DataSource,
+                              @Autowired WeatherEntityORM weatherEntityORM){
         this.h2DataSource = h2DataSource;
         this.weatherEntityORM = weatherEntityORM;
-        get(2);
     }
     @Override
     public Optional<WeatherEntity> get(int id) {
