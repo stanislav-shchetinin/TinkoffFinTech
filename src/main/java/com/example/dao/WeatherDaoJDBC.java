@@ -20,7 +20,7 @@ public class WeatherDaoJDBC implements Dao<WeatherEntity> {
                           @Autowired WeatherEntityORM weatherEntityORM){
         this.h2DataSource = h2DataSource;
         this.weatherEntityORM = weatherEntityORM;
-        update(new WeatherEntity(1, 100, 10.2, new Date(1000)));
+        delete(1);
     }
     @Override
     public Optional<WeatherEntity> get(int id) {
@@ -67,7 +67,14 @@ public class WeatherDaoJDBC implements Dao<WeatherEntity> {
     }
 
     @Override
-    public void delete(WeatherEntity weatherEntity) {
-
+    public void delete(int id) {
+        try (PreparedStatement preparedStatement =
+                     h2DataSource
+                             .getConnection()
+                             .prepareStatement(String.format("delete from weather where id = %d", id))) {
+            preparedStatement.executeUpdate();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

@@ -21,7 +21,7 @@ public class WeatherDaoHibernate implements Dao<Entity> {
     }
 
     @Override
-    public void delete(Entity entity) {
+    public void delete(int id) {
 
     }
 }
