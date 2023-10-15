@@ -1,21 +1,31 @@
 package com.example;
 
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import javax.sql.DataSource;
-
 @Configuration
+@ConfigurationProperties(prefix = "spring.datasource")
+@Setter
+@Getter
 public class JdbcConfiguration {
+    private String driverClassName;
+    private String url;
+    private String username;
+    private String password;
     @Bean
-    public DataSource mysqlDataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/springjdbc");
-        dataSource.setUsername("guest_user");
-        dataSource.setPassword("guest_password");
-
-        return dataSource;
+    @Qualifier("h2-jdbc")
+    public HikariDataSource h2DataSource() {
+        HikariConfig config = new HikariConfig();
+        config.setJdbcUrl(url);
+        config.setUsername(username);
+        config.setPassword(password);
+        return new HikariDataSource(config);
     }
 }
