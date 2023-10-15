@@ -9,10 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.time.LocalDate;
 import java.sql.Date;
-import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -45,8 +42,9 @@ public class WeatherDaoJDBC implements Dao<WeatherEntity> {
     @Override
     public void save(WeatherEntity weatherEntity) {
         try (PreparedStatement preparedStatement =
-                     h2DataSource.getConnection().prepareStatement(weatherEntityORM.generateSqlQueryForAddingWeatherEntity(weatherEntity))){
-            System.out.println(weatherEntityORM.generateSqlQueryForAddingWeatherEntity(weatherEntity));
+                     h2DataSource
+                             .getConnection()
+                             .prepareStatement(weatherEntityORM.generateSqlQueryForAddingWeatherEntity(weatherEntity))){
             preparedStatement.execute();
         } catch (Exception e){
             e.printStackTrace();

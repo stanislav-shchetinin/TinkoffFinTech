@@ -21,6 +21,7 @@ import java.util.List;
 @Component
 public class JdbcORM<T> {
     /**
+     * Отображает ResultSet в объект класса
      * @param resultSet запись таблицы
      * @param clazz класс, объект которого требуется получить из записи resultSet
      *              у класса должен быть пустой public конструктор и public сеттеры,
@@ -48,17 +49,29 @@ public class JdbcORM<T> {
 
     }
 
+    /**
+     * Генерерует запрос добавления в базу данных
+     * @param nameTable имя таблицы куда должна быть произвидена вставка
+     * @param obj объект, который отображается в эту таблицу
+     * @return SQL запрос в виде строки
+     * */
     public String generateSqlQueryForAdding(String nameTable, T obj) throws
             NoSuchMethodException, InvocationTargetException, IllegalAccessException {
 
         List<Field> fieldList = getFieldColumnFromEntity(obj);
         StringBuilder result = new StringBuilder(String.format("insert into %s (", nameTable));
 
+        //Выстраиваем имена колонок, в которые будет перенесены значения
+        //Пример: weather (city_id, temperature, date)
         for (Field field : fieldList){
             result.append(field.getDeclaredAnnotation(NameColumn.class).name());
             result.append(", ");
         }
+        //Т.к. после каждого имени добавлялась запятая, то в конце она тоже стоит
+        //Ее нужно заменить на скобку
         result.replace(result.length() - 2, result.length(), ") ");
+
+        //Собиарем значения полей
         result.append("values (");
         for (Field field : fieldList){
             Method getter = getterFromField(field);
@@ -71,6 +84,10 @@ public class JdbcORM<T> {
         return String.valueOf(result);
     }
 
+    /**
+     * Возвращает лист полей объекта, которые явлюятся колонками таблицы (не реализуют @NotTableColumn),
+     * не являются @ID, есть имя колонки, в которую отображаются (@NameColumn), не null
+     * */
     private List<Field> getFieldColumnFromEntity(T obj) throws
             NoSuchMethodException, InvocationTargetException, IllegalAccessException {
 
