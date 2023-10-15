@@ -1,15 +1,21 @@
 package com.example.util;
 
 import com.example.entities.WeatherEntity;
+import org.springframework.stereotype.Component;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-public class WeatherEntityORM {
-    public static WeatherEntity mapResultSetToWeatherEntity(ResultSet resultSet) throws SQLException,
-            InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        JdbcORM<WeatherEntity> jdbcORM = new JdbcORM<>();
-        return jdbcORM.mapResultSetToClass(resultSet, WeatherEntity.class);
+@Component
+public class WeatherEntityORM extends JdbcORM<WeatherEntity>{
+    public WeatherEntity mapResultSetToWeatherEntity(ResultSet resultSet) throws
+            SQLException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+        return mapResultSetToClass(resultSet, WeatherEntity.class);
     }
+
+    public String generateSqlQueryForAddingWeatherEntity(WeatherEntity weatherEntity) throws
+            InvocationTargetException, NoSuchMethodException, IllegalAccessException {
+        return generateSqlQueryForAdding(WeatherEntity.TABLE_NAME, weatherEntity);
+    }
+
 }
