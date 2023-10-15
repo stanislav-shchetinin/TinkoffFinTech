@@ -20,7 +20,7 @@ public class WeatherDaoJDBC implements Dao<WeatherEntity> {
                           @Autowired WeatherEntityORM weatherEntityORM){
         this.h2DataSource = h2DataSource;
         this.weatherEntityORM = weatherEntityORM;
-        save(new WeatherEntity(2, 10.2, new Date(1000)));
+        update(new WeatherEntity(1, 100, 10.2, new Date(1000)));
     }
     @Override
     public Optional<WeatherEntity> get(int id) {
@@ -51,9 +51,19 @@ public class WeatherDaoJDBC implements Dao<WeatherEntity> {
         }
     }
 
+    /**
+     * Берет id из weatherEntity и обновляет у записи с соответвующим id все поля на поля из weatherEntity
+     * */
     @Override
-    public void update(WeatherEntity weatherEntity, String[] params) {
-
+    public void update(WeatherEntity weatherEntity) {
+        try (PreparedStatement preparedStatement =
+                     h2DataSource
+                             .getConnection()
+                             .prepareStatement(weatherEntityORM.generateSqlQueryForUpdatingWeatherEntity(weatherEntity))) {
+            preparedStatement.executeUpdate();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override

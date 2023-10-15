@@ -16,7 +16,7 @@ public class WeatherDaoHibernate implements Dao<Entity> {
     }
 
     @Override
-    public void update(Entity entity, String[] params) {
+    public void update(Entity entity) {
 
     }
 

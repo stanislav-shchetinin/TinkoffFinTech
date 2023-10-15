@@ -1,6 +1,7 @@
 package com.example.util;
 
 import com.example.entities.WeatherEntity;
+import com.example.exceptions.EmptyClassException;
 import com.example.util.annotations.ID;
 import com.example.util.annotations.NameColumn;
 import com.example.util.annotations.NotTableColumn;
@@ -84,6 +85,27 @@ public class JdbcORM<T> {
         return String.valueOf(result);
     }
 
+    public String generateSqlQueryForUpdating(String nameTable, T obj) throws
+            InvocationTargetException, NoSuchMethodException, IllegalAccessException {
+
+        List<Field> fieldList = getFieldColumnFromEntity(obj);
+        Field fieldId = fieldIdInEntity(obj);
+
+        StringBuilder result = new StringBuilder(String.format("update %s set ", nameTable));
+
+        for (Field field : fieldList){
+            result.append(String.format("%s = '%s', ",
+                    field.getDeclaredAnnotation(NameColumn.class).name(),
+                    getterFromField(field).invoke(obj)));
+        }
+
+        result.replace(result.length() - 2, result.length(),
+                String.format(" where %s = %s", fieldId.getName(), getterFromField(fieldId).invoke(obj)));
+
+        return String.valueOf(result);
+
+    }
+
     /**
      * Возвращает лист полей объекта, которые явлюятся колонками таблицы (не реализуют @NotTableColumn),
      * не являются @ID, есть имя колонки, в которую отображаются (@NameColumn), не null
@@ -101,6 +123,29 @@ public class JdbcORM<T> {
             }
         }
         return fieldList;
+    }
+
+    /**
+     * Метод для поиска id
+     * Если есть поля помеченные аннотацией @ID, то идентификатором считается первое из таких
+     * Если такого поля нет, то идентификатором считается первое поле класса
+     * Если у класса нет полей, то возвращается исключение
+     * */
+    private Field fieldIdInEntity(T obj) throws EmptyClassException{
+        Field firstField = null;
+        for (Field field : obj.getClass().getDeclaredFields()){
+            if (firstField == null){
+                firstField = field;
+            }
+            if (field.isAnnotationPresent(ID.class)){
+                return field;
+            }
+        }
+        if (firstField != null) {
+            return firstField;
+        } else {
+            throw new EmptyClassException();
+        }
     }
 
     private static Method setterFromField(Field field) throws NoSuchMethodException {

@@ -18,4 +18,9 @@ public class WeatherEntityORM extends JdbcORM<WeatherEntity>{
         return generateSqlQueryForAdding(WeatherEntity.TABLE_NAME, weatherEntity);
     }
 
+    public String generateSqlQueryForUpdatingWeatherEntity(WeatherEntity weatherEntity) throws
+            InvocationTargetException, NoSuchMethodException, IllegalAccessException {
+        return generateSqlQueryForUpdating(WeatherEntity.TABLE_NAME, weatherEntity);
+    }
+
 }
