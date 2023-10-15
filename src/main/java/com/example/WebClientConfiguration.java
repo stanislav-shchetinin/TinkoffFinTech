@@ -12,4 +12,5 @@ public class WebClientConfiguration {
     public WebClient webClient(){
         return WebClient.create(BASE_URL);
     }
+
 }
