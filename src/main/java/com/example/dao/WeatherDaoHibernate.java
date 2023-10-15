@@ -6,13 +6,8 @@ import java.util.Optional;
 
 public class WeatherDaoHibernate implements Dao<Entity> {
     @Override
-    public Optional<Entity> get(long id) {
+    public Optional<Entity> get(int id) {
         return Optional.empty();
-    }
-
-    @Override
-    public List<Entity> getAll() {
-        return null;
     }
 
     @Override

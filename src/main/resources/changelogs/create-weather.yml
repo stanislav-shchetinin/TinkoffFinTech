@@ -25,7 +25,7 @@ databaseChangeLog:
                     constraints:
                       nullable: false
                 - column:
-                    name: time
-                    type: timestamp
+                    name: date
+                    type: date
                     constraints:
                       nullable: false

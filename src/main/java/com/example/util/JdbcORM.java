@@ -16,8 +16,10 @@ public class JdbcORM<T> {
 
         for (int i = 0; i < clazz.getDeclaredFields().length; ++i){
             Field field = clazz.getDeclaredFields()[i];
-            Method getter = setterFromField(field);
-            getter.invoke(obj, resultSet.getObject(i + 1));
+            field.setAccessible(true);
+            field.set(obj, resultSet.getObject(i + 1));
+            /*Method setter = setterFromField(field);
+            setter.invoke(obj, resultSet.getObject(i + 1));*/
         }
 
         return obj;
@@ -26,7 +28,7 @@ public class JdbcORM<T> {
 
     private static Method setterFromField(Field field) throws NoSuchMethodException {
         String fieldName = field.getName();
-        String getterName = "get" + fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1);
-        return field.getDeclaringClass().getDeclaredMethod(getterName);
+        String setterName = "set" + fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1);
+        return field.getDeclaringClass().getDeclaredMethod(setterName, field.getType());
     }
 }

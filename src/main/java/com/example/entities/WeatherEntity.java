@@ -1,10 +1,17 @@
 package com.example.entities;
 
-import java.time.LocalDateTime;
+import lombok.*;
 
+import java.sql.Date;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@Setter
+@Getter
 public class WeatherEntity {
-    private int id;
-    private int cityId;
-    private double temperature;
-    private LocalDateTime localDateTime;
+    private Integer id;
+    private Integer cityId;
+    private Double temperature;
+    private Date localDate;
 }
