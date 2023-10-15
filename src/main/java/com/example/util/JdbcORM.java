@@ -1,6 +1,8 @@
 package com.example.util;
 
 import com.example.entities.WeatherEntity;
+import com.example.util.annotations.ID;
+import com.example.util.annotations.NameColumn;
 import com.example.util.annotations.NotTableColumn;
 import org.springframework.stereotype.Component;
 
@@ -10,6 +12,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Класс для сопоставления записям БД и Java сущностям
  * */
@@ -45,18 +50,40 @@ public class JdbcORM<T> {
 
     public String generateSqlQueryForAdding(String nameTable, T obj) throws
             NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        StringBuilder result = new StringBuilder(String.format("insert into %s values (", nameTable));
-        for (Field field : obj.getClass().getDeclaredFields()){
-            if (field.isAnnotationPresent(NotTableColumn.class)){
-                continue;
-            }
-            Method getter = getterFromField(field);
-            result.append(getter.invoke(obj));
+
+        List<Field> fieldList = getFieldColumnFromEntity(obj);
+        StringBuilder result = new StringBuilder(String.format("insert into %s (", nameTable));
+
+        for (Field field : fieldList){
+            result.append(field.getDeclaredAnnotation(NameColumn.class).name());
             result.append(", ");
         }
-        result.replace(result.length() - 1, result.length(), " );");
+        result.replace(result.length() - 2, result.length(), ") ");
+        result.append("values (");
+        for (Field field : fieldList){
+            Method getter = getterFromField(field);
+            result.append("'");
+            result.append(getter.invoke(obj));
+            result.append("', ");
+        }
+        result.replace(result.length() - 2, result.length(), ");");
 
         return String.valueOf(result);
+    }
+
+    private List<Field> getFieldColumnFromEntity(T obj) throws
+            NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+
+        List<Field> fieldList = new ArrayList<>();
+        for (Field field : obj.getClass().getDeclaredFields()){
+            if (!field.isAnnotationPresent(NotTableColumn.class)
+                    && !field.isAnnotationPresent(ID.class)
+                    && field.isAnnotationPresent(NameColumn.class)
+                    && getterFromField(field).invoke(obj) != null){
+                fieldList.add(field);
+            }
+        }
+        return fieldList;
     }
 
     private static Method setterFromField(Field field) throws NoSuchMethodException {
