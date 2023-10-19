@@ -3,3 +3,7 @@ resilience4j.ratelimiter:
     weatherAPIService:
       limitForPeriod: 4
       limitRefreshPeriod: 10s
+
+weatherapi:
+  key: ${API_KEY}
+  baseUrl: "https://api.weatherapi.com/v1"
