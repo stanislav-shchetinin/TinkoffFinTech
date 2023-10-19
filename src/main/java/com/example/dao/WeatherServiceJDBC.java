@@ -3,6 +3,7 @@ package com.example.dao;
 import com.example.entities.WeatherEntity;
 import com.example.util.WeatherEntityORM;
 import com.zaxxer.hikari.HikariDataSource;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -13,6 +14,7 @@ import java.sql.ResultSet;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class WeatherServiceJDBC implements Dao<WeatherEntity> {
     private final HikariDataSource h2DataSource;
     private final WeatherEntityORM weatherEntityORM;
@@ -20,6 +22,7 @@ public class WeatherServiceJDBC implements Dao<WeatherEntity> {
                               @Autowired WeatherEntityORM weatherEntityORM){
         this.h2DataSource = h2DataSource;
         this.weatherEntityORM = weatherEntityORM;
+        get(2);
     }
     @Override
     public Optional<WeatherEntity> get(int id) {
@@ -30,7 +33,7 @@ public class WeatherServiceJDBC implements Dao<WeatherEntity> {
             WeatherEntity weatherEntity = weatherEntityORM.mapResultSetToWeatherEntity(resultSet);
             return Optional.ofNullable(weatherEntity);
         } catch (Exception e) {
-            e.printStackTrace();
+            log.warn(e.getMessage(), e);
             return Optional.empty();
         }
     }
@@ -43,7 +46,7 @@ public class WeatherServiceJDBC implements Dao<WeatherEntity> {
                              .prepareStatement(weatherEntityORM.generateSqlQueryForAddingWeatherEntity(weatherEntity))){
             preparedStatement.execute();
         } catch (Exception e){
-            e.printStackTrace();
+            log.warn(e.getMessage(), e);
         }
     }
 
@@ -58,7 +61,7 @@ public class WeatherServiceJDBC implements Dao<WeatherEntity> {
                              .prepareStatement(weatherEntityORM.generateSqlQueryForUpdatingWeatherEntity(weatherEntity))) {
             preparedStatement.executeUpdate();
         } catch (Exception e){
-            e.printStackTrace();
+            log.warn(e.getMessage(), e);
         }
     }
 
@@ -70,7 +73,7 @@ public class WeatherServiceJDBC implements Dao<WeatherEntity> {
                              .prepareStatement(String.format("delete from weather where id = %d", id))) {
             preparedStatement.executeUpdate();
         } catch (Exception e){
-            e.printStackTrace();
+            log.warn(e.getMessage(), e);
         }
     }
 }
