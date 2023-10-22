@@ -1,10 +1,13 @@
 package com.example;
 
+import com.example.transaction.WeatherAPITransactionService;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @OpenAPIDefinition(
 		info = @Info(
@@ -19,6 +22,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class WeatherApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(WeatherApplication.class, args);
+	}
+
+	@Bean
+	public CommandLineRunner commandLineRunner(final WeatherAPITransactionService weatherAPITransactionService){
+		return args -> weatherAPITransactionService.saveInDataBaseWeatherInCity("London");
 	}
 
 }

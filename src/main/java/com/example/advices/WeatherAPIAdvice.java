@@ -4,6 +4,7 @@ import com.example.exceptions.NotFoundException;
 import com.example.exceptions.WeatherAPIClientException;
 import com.example.exceptions.WeatherAPIServerException;
 import com.example.response.Response;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import io.github.resilience4j.ratelimiter.RequestNotPermitted;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,8 +13,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
 public class WeatherAPIAdvice {
-    @ExceptionHandler(WeatherAPIServerException.class)
-    public ResponseEntity<Response> handleException(WeatherAPIServerException e) {
+    @ExceptionHandler({WeatherAPIServerException.class, JsonProcessingException.class})
+    public ResponseEntity<Response> handleException(Exception e) {
         return new ResponseEntity<>(new Response(HttpStatus.INTERNAL_SERVER_ERROR.value(), e.getMessage()),
                 HttpStatus.INTERNAL_SERVER_ERROR);
     }
