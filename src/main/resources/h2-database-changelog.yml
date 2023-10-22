@@ -13,3 +13,5 @@ databaseChangeLog:
       file: classpath:changelogs/insert-into-weather-test.yml
   - include:
       file: classpath:changelogs/create-weatherapi.yml
+  - include:
+      file: classpath:changelogs/create-indexes.yml

@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id:  createIndex-city-id
+      author:  Stas
+      changes:
+        - createIndex:
+            columns:
+              - column:
+                  name:  temperature
+            indexName:  idx_temperature
+            tableName:  weather_api
+        - createIndex:
+            columns:
+              - column:
+                  name: city_id
+              - column:
+                  name: timestamp
+            indexName: idx_city_id_timestamp
+            tableName: weather_api
