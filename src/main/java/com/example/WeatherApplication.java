@@ -24,9 +24,4 @@ public class WeatherApplication {
 		SpringApplication.run(WeatherApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner(final WeatherAPITransactionService weatherAPITransactionService){
-		return args -> weatherAPITransactionService.saveInDataBaseWeatherInCity("London");
-	}
-
 }
