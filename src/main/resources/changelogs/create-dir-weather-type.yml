@@ -1,0 +1,7 @@
+databaseChangeLog:
+  -  changeSet:
+       id:  create-dir-weather-type
+       author:  Stas
+       changes:
+         -  sql:
+              sql: create table dir_weather_type(weather_type varchar(255) primary key check (weather_type in ('cloudy', 'sunny', 'windy', 'snowy', 'foggy', 'rainy', 'hot')));

@@ -1,0 +1,17 @@
+databaseChangeLog:
+  -  changeSet:
+       author: Stas
+       id: insert-into-weather-test
+       changes:
+         - insert:
+             tableName: weather
+             columns:
+               - column:
+                   name: city_id
+                   value: 2
+               - column:
+                   name: temperature
+                   value: 12.0
+               - column:
+                   name: date
+                   value: "2022-04-04"
