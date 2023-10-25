@@ -4,6 +4,7 @@ resilience4j.ratelimiter:
       limitForPeriod: 4
       limitRefreshPeriod: 10s
 
+
 spring:
   datasource:
     url: jdbc:h2:mem:db
@@ -19,3 +20,4 @@ spring:
 
 weatherapi:
   key: ${API_KEY}
+  baseUrl: "https://api.weatherapi.com/v1"
