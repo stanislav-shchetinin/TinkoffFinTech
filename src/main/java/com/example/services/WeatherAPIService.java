@@ -2,7 +2,10 @@ package com.example.services;
 
 import com.example.exceptions.WeatherAPIClientException;
 import com.example.exceptions.WeatherAPIServerException;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,10 +13,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
 @Service
+@Slf4j
 public class WeatherAPIService {
     private final WebClient webClient;
 
@@ -34,7 +39,7 @@ public class WeatherAPIService {
         this.webClient = webClient;
     }
 
-    public Map<String, Object> getWeather(String city){
+    public Map<String, Object> getWeather(String city) throws JsonProcessingException {
         Mono<String> response = webClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path("/current.json")
@@ -44,7 +49,10 @@ public class WeatherAPIService {
                         .build())
                 .exchangeToMono(clientResponse -> clientResponse.bodyToMono(String.class));
 
-        JSONObject jsonObject = new JSONObject(response.block());
+            Map<String, Object> jsonObject = new ObjectMapper().readValue(response.block(), HashMap.class);
+            if (jsonObject.containsKey(NAME_FIELD_JSON_ERROR)){
+                Map<String, Object> innerError = (Map<String, Object>) jsonObject.get(NAME_FIELD_JSON_ERROR);
+                int codeError = (int) innerError.get(NAME_FIELD_JSON_CODE);
 
         if (jsonObject.has(NAME_FIELD_JSON_ERROR)){
             JSONObject innerError = jsonObject.getJSONObject(NAME_FIELD_JSON_ERROR);
@@ -58,9 +66,9 @@ public class WeatherAPIService {
                 throw new WeatherAPIClientException(innerError.getString(ERROR_MESSAGE_IN_JSON));
             }
 
-        }
+            return jsonObject;
 
-        return jsonObject.toMap();
+
     }
 
 }

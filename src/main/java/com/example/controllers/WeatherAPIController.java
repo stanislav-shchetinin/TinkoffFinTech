@@ -1,6 +1,7 @@
 package com.example.controllers;
 
 import com.example.services.WeatherAPIService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -48,7 +49,7 @@ public class WeatherAPIController {
     })
     @GetMapping("/current.json")
     @RateLimiter(name="weatherAPIService")
-    public Map<String, Object> getWeather(@RequestParam String city){
+    public Map<String, Object> getWeather(@RequestParam String city) throws JsonProcessingException {
         return  weatherAPIService.getWeather(city);
     }
 

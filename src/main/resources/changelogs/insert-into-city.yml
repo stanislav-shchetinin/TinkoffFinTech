@@ -8,6 +8,12 @@ databaseChangeLog:
              columns:
                - column:
                    name: name
+                   value: "London"
+         - insert:
+             tableName: city
+             columns:
+               - column:
+                   name: name
                    value: "Абаза"
          - insert:
              tableName: city

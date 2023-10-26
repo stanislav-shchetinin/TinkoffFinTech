@@ -22,7 +22,6 @@ public class WeatherServiceJDBC implements Dao<WeatherEntity> {
                               @Autowired WeatherEntityORM weatherEntityORM){
         this.h2DataSource = h2DataSource;
         this.weatherEntityORM = weatherEntityORM;
-        get(2);
     }
     @Override
     public Optional<WeatherEntity> get(int id) {
