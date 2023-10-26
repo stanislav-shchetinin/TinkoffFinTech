@@ -30,6 +30,11 @@ public class WeatherAPIService {
     private final String PARAMETER_NEED_INFO_AIR = "aqi";
     private final String NAME_FIELD_JSON_ERROR = "error";
     private final String NAME_FIELD_JSON_CODE = "code";
+    private final int KEY_NOT_PROVIDED = 1002;
+    private final int KEY_API_ERROR_FIRST_DIGIT = 2;
+    private final int SERVER_ERROR_FIRST_DIGIT = 9;
+    private final String UNIDENTIFIED_ERROR = "Что-то пошло не так...";
+    private final String ERROR_MESSAGE_IN_JSON = "message";
     public WeatherAPIService(@Qualifier("weatherAPIClient") WebClient webClient){
         this.webClient = webClient;
     }
@@ -49,12 +54,16 @@ public class WeatherAPIService {
                 Map<String, Object> innerError = (Map<String, Object>) jsonObject.get(NAME_FIELD_JSON_ERROR);
                 int codeError = (int) innerError.get(NAME_FIELD_JSON_CODE);
 
-                if (codeError >= 2006 || codeError == 1002) {
-                    throw new WeatherAPIServerException("Что-то пошло не так...");
-                } else {
-                    throw new WeatherAPIClientException((String) innerError.get("message"));
-                }
-
+        if (jsonObject.has(NAME_FIELD_JSON_ERROR)){
+            JSONObject innerError = jsonObject.getJSONObject(NAME_FIELD_JSON_ERROR);
+            int codeError = innerError.getInt(NAME_FIELD_JSON_CODE);
+            int firstDigitCodeError = codeError / 1000;
+            if (firstDigitCodeError == KEY_API_ERROR_FIRST_DIGIT
+                    || firstDigitCodeError == SERVER_ERROR_FIRST_DIGIT
+                    || codeError == KEY_NOT_PROVIDED) {
+                throw new WeatherAPIServerException(UNIDENTIFIED_ERROR);
+            } else {
+                throw new WeatherAPIClientException(innerError.getString(ERROR_MESSAGE_IN_JSON));
             }
 
             return jsonObject;
