@@ -5,6 +5,7 @@ import com.example.services.WeatherCityBehavior;
 import com.example.services.WeatherCityService;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -13,17 +14,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Description;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.ResultMatcher;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.time.LocalDate;
 
+import static net.bytebuddy.matcher.ElementMatchers.is;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(
@@ -49,6 +53,11 @@ public class WeatherCityControllerTest {
         assertThat(weatherCityController).isNotNull();
     }
 
+    /**
+     * Запрос: корректное имя региона, корректная дата
+     * Ожидаемый ответ: json с температурой
+     * Ожидаемый код: 200 OK
+     * */
     @Test
     public void getTemperatureByDate_validRegionAndDate_returnTemperature() throws Exception{
         final LocalDate DATE = LocalDate.parse(DATE_STRING);
@@ -60,7 +69,9 @@ public class WeatherCityControllerTest {
 
         mockMvc.perform(get(URI, NAME_REGION)
                         .param(NAME_DATE_PARAMETER, DATE_STRING))
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$.temperature").value(temperature));
         verify(weatherCityService, times(1)).getTemperature(NAME_REGION, DATE);
     }
 
