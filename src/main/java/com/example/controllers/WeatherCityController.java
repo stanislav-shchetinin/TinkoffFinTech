@@ -3,6 +3,7 @@ package com.example.controllers;
 import com.example.exceptions.NotFoundException;
 import com.example.response.Response;
 import com.example.response.ResponseGetTemperature;
+import com.example.services.WeatherCityBehavior;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -25,7 +26,7 @@ import java.time.LocalDate;
                 "удаления региона")
 public class WeatherCityController {
 
-    private final WeatherCityService weatherCityService;
+    private final WeatherCityBehavior weatherCityService;
 
     /**
      * В качестве аргумента метод получает доту (без времени)

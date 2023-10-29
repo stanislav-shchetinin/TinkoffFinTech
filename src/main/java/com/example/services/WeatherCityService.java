@@ -15,11 +15,13 @@ import java.time.LocalDate;
 @RequiredArgsConstructor
 @Getter
 @Service
-public class WeatherCityService {
+public class WeatherCityService implements WeatherCityBehavior{
     private final WrapperListWeather listWeather;
     private final WrapperMapCityWeather mapCityWeather;
     private final WrapperSetDelete setDelete;
     private final FactoryWeather factoryWeather;
+
+    @Override
     public void add(String nameRegion, WeatherLiteRequest weatherLite){
         Weather weather = factoryWeather.createWeather(
                 nameRegion, weatherLite.getTemperature(), weatherLite.getCreationDate()
@@ -29,20 +31,25 @@ public class WeatherCityService {
         mapCityWeather.add(weather);
     }
 
+    @Override
     public boolean isRegionInBase(String nameRegion){
         return !setDelete.isInSet(nameRegion);
     }
 
+    @Override
     public boolean isEntryInBase(String nameRegion, LocalDate localDate){
         return isRegionInBase(nameRegion) &&
                 mapCityWeather.isInMap(nameRegion, localDate);
     }
+    @Override
     public boolean deleteRegion(String nameRegion){
         return setDelete.addRegion(nameRegion);
     }
+    @Override
     public Double getTemperature(String nameRegion, LocalDate localDate){
         return mapCityWeather.get(nameRegion, localDate);
     }
+    @Override
     public void update(String nameRegion, WeatherLiteRequest weatherLite){
         Weather weather = factoryWeather.createWeather(
                 nameRegion, weatherLite.getTemperature(), weatherLite.getCreationDate()

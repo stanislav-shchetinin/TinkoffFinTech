@@ -1,5 +1,6 @@
+package com.example.controllers;
+
 import com.example.WeatherApplication;
-import com.example.controllers.WeatherAPIController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         classes = WeatherApplication.class
 )
 @AutoConfigureMockMvc
-public class TestWeatherAPIController {
+public class WeatherAPIControllerTest {
 
     private static final String NAME_CITY_FIRST = "Volgograd";
     private static final String NAME_CITY_SECOND = "Saint Petersburg";
