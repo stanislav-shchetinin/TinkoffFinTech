@@ -25,6 +25,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testImplementation 'org.projectlombok:lombok:1.18.24'
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation "org.springframework.boot:spring-boot-starter-web"
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -40,7 +41,8 @@ dependencies {
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
     implementation 'org.hibernate.orm:hibernate-core:6.3.1.Final'
     testImplementation 'org.springframework.boot:spring-boot-test-autoconfigure:3.1.4'
-
+    testImplementation "org.springframework.boot:spring-boot-testcontainers"
+    testImplementation "org.testcontainers:junit-jupiter"
 
 }
 
