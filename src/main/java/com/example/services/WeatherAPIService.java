@@ -39,7 +39,7 @@ public class WeatherAPIService {
         this.webClient = webClient;
     }
 
-    public Map<String, Object> getWeather(String city) throws JsonProcessingException {
+    public Map<String, Object> getWeather(String city){
         Mono<String> response = webClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path("/current.json")
@@ -49,10 +49,7 @@ public class WeatherAPIService {
                         .build())
                 .exchangeToMono(clientResponse -> clientResponse.bodyToMono(String.class));
 
-            Map<String, Object> jsonObject = new ObjectMapper().readValue(response.block(), HashMap.class);
-            if (jsonObject.containsKey(NAME_FIELD_JSON_ERROR)){
-                Map<String, Object> innerError = (Map<String, Object>) jsonObject.get(NAME_FIELD_JSON_ERROR);
-                int codeError = (int) innerError.get(NAME_FIELD_JSON_CODE);
+        JSONObject jsonObject = new JSONObject(response.block());
 
         if (jsonObject.has(NAME_FIELD_JSON_ERROR)){
             JSONObject innerError = jsonObject.getJSONObject(NAME_FIELD_JSON_ERROR);
@@ -66,9 +63,9 @@ public class WeatherAPIService {
                 throw new WeatherAPIClientException(innerError.getString(ERROR_MESSAGE_IN_JSON));
             }
 
-            return jsonObject;
+        }
 
-
+        return jsonObject.toMap();
     }
 
 }

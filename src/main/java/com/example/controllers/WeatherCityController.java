@@ -3,6 +3,7 @@ package com.example.controllers;
 import com.example.exceptions.NotFoundException;
 import com.example.response.Response;
 import com.example.response.ResponseGetTemperature;
+import com.example.services.WeatherCityBehavior;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -10,6 +11,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import com.example.requests.WeatherLiteRequest;
@@ -25,7 +27,7 @@ import java.time.LocalDate;
                 "удаления региона")
 public class WeatherCityController {
 
-    private final WeatherCityService weatherCityService;
+    private final WeatherCityBehavior weatherCityService;
 
     /**
      * В качестве аргумента метод получает доту (без времени)

@@ -75,7 +75,7 @@ public class WeatherAPITransactionService {
         });
     }
 
-    private WeatherAPIEntity buildWeatherAPIEntity(String city, Map<String, Object> obj){
+    private WeatherAPIEntity buildWeatherAPIEntity(String city, Map<String, Object> obj) throws JsonProcessingException{
         Map<String, Object> current = (Map<String, Object>) obj.get("current");
         Double temperature = (Double) current.get("temp_c");
         Timestamp timestamp = Timestamp.valueOf(current.get("last_updated").toString() + ":00");
