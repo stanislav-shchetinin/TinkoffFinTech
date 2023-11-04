@@ -1,0 +1,26 @@
+databaseChangeLog:
+  -  changeSet:
+       id:  create-user-app
+       author:  Stas
+       changes:
+         -  createTable:
+              tableName:  user_app
+              columns:
+                -  column:
+                     name:  id
+                     type:  uuid
+                     constraints:
+                       primaryKey:  true
+                -  column:
+                     name:  login
+                     type:  varchar(256)
+                     constraints:
+                       nullable:  false
+                - column:
+                    name: password
+                    type: varchar(512)
+                    constraints:
+                      nullable: false
+                - column:
+                    name: active
+                    type: boolean
