@@ -16,6 +16,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher;
 import org.springframework.security.web.util.matcher.AndRequestMatcher;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.security.web.util.matcher.RegexRequestMatcher;
 import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 
 import javax.sql.DataSource;
@@ -55,7 +56,7 @@ public class SecurityConfiguration {
                                 .requestMatchers(
                                         new AntPathRequestMatcher("/v3/api-docs", HttpMethod.GET.name()))
                                 .permitAll()
-                                .requestMatchers(new AntPathRequestMatcher("v1/current.json", HttpMethod.GET.name() ))
+                                .requestMatchers(new AntPathRequestMatcher("/v1/current.json", HttpMethod.GET.name() ))
                                 .hasAnyRole(RoleCheck.USER.name(), RoleCheck.ADMIN.name())
                                 .requestMatchers(new AntPathRequestMatcher("/api/weather/{city}", HttpMethod.GET.name()))
                                 .hasAnyRole(RoleCheck.USER.name(), RoleCheck.ADMIN.name())
