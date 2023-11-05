@@ -1,20 +1,22 @@
 package com.example.configs;
 
-import com.example.enums.Role;
+import com.example.enums.RoleCheck;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher;
+import org.springframework.security.web.util.matcher.AndRequestMatcher;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 
 import javax.sql.DataSource;
 
@@ -46,8 +48,18 @@ public class SecurityConfiguration {
                                 .permitAll()
                                 .requestMatchers(
                                         new AntPathRequestMatcher("/h2-console/**"))
-                                .hasRole("ADMIN")
-                                .anyRequest().authenticated()
+                                .hasRole(RoleCheck.ADMIN.name())
+                                .requestMatchers(
+                                        new AntPathRequestMatcher("/swagger-ui/index.html", HttpMethod.GET.name()))
+                                .permitAll()
+                                .requestMatchers(
+                                        new AntPathRequestMatcher("/v3/api-docs", HttpMethod.GET.name()))
+                                .permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("v1/current.json", HttpMethod.GET.name() ))
+                                .hasAnyRole(RoleCheck.USER.name(), RoleCheck.ADMIN.name())
+                                .requestMatchers(new AntPathRequestMatcher("/api/weather/{city}", HttpMethod.GET.name()))
+                                .hasAnyRole(RoleCheck.USER.name(), RoleCheck.ADMIN.name())
+                                .anyRequest().hasRole(RoleCheck.ADMIN.name())
                 )
                 .cors(httpSecurityCorsConfigurer -> {})
                 .httpBasic(withDefaults())
