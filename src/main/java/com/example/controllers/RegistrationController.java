@@ -7,6 +7,7 @@ import com.example.entities.User;
 import com.example.enums.Role;
 import com.example.exceptions.UserAlreadyExistsException;
 import com.example.response.Response;
+import com.example.services.RegistrationService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,20 +23,9 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public class RegistrationController {
 
-    private final UserRepo userRepo;
-    private final AuthorityRepo authorityRepo;
-    private final PasswordEncoder encoder;
+    private final RegistrationService registrationService;
     @PostMapping
     public Response registration(@RequestBody User user){
-        String login = user.getUsername();
-        if (userRepo.findByUsername(login) != null){
-            throw new UserAlreadyExistsException();
-        } else {
-            user.setEnabled(true);
-            user.setPassword(encoder.encode(user.getPassword()));
-            userRepo.save(user);
-            authorityRepo.save(new Authority(user.getUsername(), Role.ROLE_USER.name()));
-            return new Response(HttpStatus.OK.value(), "User successfully added");
-        }
+        return registrationService.addNewUser(user);
     }
 }
