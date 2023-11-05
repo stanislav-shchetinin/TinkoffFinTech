@@ -1,5 +1,6 @@
 package com.example.configs;
 
+import com.example.enums.Role;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -29,23 +30,15 @@ public class SecurityConfiguration {
     }
 
     @Bean
-    public JdbcUserDetailsManager users(DataSource dataSource, PasswordEncoder encoder) {
-        UserDetails admin = User.builder()
-                .username("admin")
-                .password(encoder.encode("12345"))
-                .roles("ADMIN")
-                .build();
-        JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(dataSource);
-        jdbcUserDetailsManager.createUser(admin);
-        return jdbcUserDetailsManager;
+    public JdbcUserDetailsManager users(DataSource dataSource) {
+        //password: 12345
+        return new JdbcUserDetailsManager(dataSource);
     }
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .httpBasic(withDefaults())
                 .authorizeHttpRequests(auth ->
                         auth
                                 .requestMatchers(
@@ -53,7 +46,7 @@ public class SecurityConfiguration {
                                 .permitAll()
                                 .requestMatchers(
                                         new AntPathRequestMatcher("/h2-console/**"))
-                                .permitAll()
+                                .hasRole("ADMIN")
                                 .anyRequest().authenticated()
                 )
                 .cors(httpSecurityCorsConfigurer -> {})
