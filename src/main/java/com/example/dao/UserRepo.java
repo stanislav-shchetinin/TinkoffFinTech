@@ -1,13 +1,15 @@
 package com.example.dao;
 
-import com.example.entities.UserEntity;
-import org.h2.engine.User;
+import com.example.entities.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
 @Repository
-public interface UserRepo extends CrudRepository<UserEntity, UUID> {
-    UserEntity findByLogin(String login);
+public interface UserRepo extends CrudRepository<User, String> {
+    User findByUsername(String username);
+
+    @Override
+    <S extends User> S save(S entity);
 }

@@ -1,17 +1,16 @@
 package com.example.controllers;
 
+import com.example.dao.AuthorityRepo;
 import com.example.dao.UserRepo;
-import com.example.dao.WeatherServiceHibernate;
-import com.example.entities.UserEntity;
+import com.example.entities.Authority;
+import com.example.entities.User;
+import com.example.enums.Role;
 import com.example.exceptions.UserAlreadyExistsException;
-import com.example.requests.WeatherLiteRequest;
 import com.example.response.Response;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.annotation.security.PermitAll;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,16 +23,18 @@ import org.springframework.web.bind.annotation.*;
 public class RegistrationController {
 
     private final UserRepo userRepo;
+    private final AuthorityRepo authorityRepo;
     private final PasswordEncoder encoder;
     @PostMapping
-    public Response registration(@RequestBody UserEntity user){
-        String login = user.getLogin();
-        if (userRepo.findByLogin(login) != null){
+    public Response registration(@RequestBody User user){
+        String login = user.getUsername();
+        if (userRepo.findByUsername(login) != null){
             throw new UserAlreadyExistsException();
         } else {
-            user.setActive(true);
+            user.setEnabled(true);
             user.setPassword(encoder.encode(user.getPassword()));
             userRepo.save(user);
+            authorityRepo.save(new Authority(user.getUsername(), Role.ROLE_USER.name()));
             return new Response(HttpStatus.OK.value(), "User successfully added");
         }
     }

@@ -16,4 +16,6 @@ databaseChangeLog:
   - include:
       file: classpath:changelogs/create-indexes.yml
   - include:
-      file: classpath:changelogs/create-user-app.yml
+      file: classpath:changelogs/create-users.yml
+  - include:
+      file: classpath:changelogs/create-authorities.yml
