@@ -22,7 +22,8 @@ public class RegistrationService {
 
     public Response addNewUser(User user) throws UserAlreadyExistsException{
         String login = user.getUsername();
-        if (userRepo.findByUsername(login) != null){
+        boolean isUserAlreadyExist = userRepo.findByUsername(login) != null;
+        if (isUserAlreadyExist){
             throw new UserAlreadyExistsException();
         } else {
             user.setEnabled(true);
