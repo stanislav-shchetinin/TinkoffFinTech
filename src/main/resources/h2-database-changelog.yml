@@ -15,3 +15,9 @@ databaseChangeLog:
       file: classpath:changelogs/create-weatherapi.yml
   - include:
       file: classpath:changelogs/create-indexes.yml
+  - include:
+      file: classpath:changelogs/create-users.yml
+  - include:
+      file: classpath:changelogs/create-authorities.yml
+  - include:
+      file: classpath:changelogs/create-admin.yml

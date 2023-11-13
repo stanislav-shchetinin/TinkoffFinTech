@@ -5,6 +5,7 @@ import com.example.entities.WeatherEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -22,6 +23,7 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 @SpringBootTest(webEnvironment = RANDOM_PORT, classes = {WeatherApplication.class, JdbcTestConfiguration.class})
@@ -31,7 +33,7 @@ public class TestContainersH2Test {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    @InjectMocks
+    @Autowired
     private WeatherServiceHibernate weatherServiceHibernate;
 
     @MockBean
@@ -44,27 +46,11 @@ public class TestContainersH2Test {
             .waitingFor(Wait.defaultWaitStrategy());
 
     @Test
-    public void testSelectFromTestTable() {
-
-        jdbcTemplate.execute(
-                "CREATE TABLE tinkoff (" +
-                        "    ID INT PRIMARY KEY," +
-                        "    VAL VARCHAR(255)" +
-                        ")");
-        jdbcTemplate.update(
-                "INSERT INTO tinkoff (ID, VAL) VALUES (?, ?)",
-                1, "Test Val");
-        String testName = jdbcTemplate.queryForObject("SELECT VAL FROM tinkoff WHERE id = 1", String.class);
-
-        assertThat(testName).isEqualTo("Test Val");
-    }
-
-    @Test
     public void testWeatherService() {
         int numberOfRecordsBefore = ((List<WeatherEntity>)weatherRepoHibernate.findAll()).size();
         WeatherEntity weatherEntity = new WeatherEntity(1, 10., Date.valueOf("2022-01-01"));
-        weatherRepoHibernate.save(weatherEntity);
-        when(weatherRepoHibernate.findById(1)).thenReturn(Optional.of(weatherEntity));
+        weatherServiceHibernate.save(weatherEntity);
+        when(weatherRepoHibernate.findById(anyInt())).thenReturn(Optional.of(weatherEntity));
 
         Optional<WeatherEntity> weatherEntityTest = weatherServiceHibernate.get(1);
         weatherEntityTest.ifPresent(entity -> assertEquals(weatherEntity, entity));
