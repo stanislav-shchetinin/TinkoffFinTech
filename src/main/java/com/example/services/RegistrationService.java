@@ -29,7 +29,7 @@ public class RegistrationService {
             user.setPassword(encoder.encode(user.getPassword()));
             userRepo.save(user);
             authorityRepo.save(new Authority(user.getUsername(), RoleAdd.ROLE_USER.name()));
-            return new Response(HttpStatus.OK.value(), "User successfully added");
+            return new Response(HttpStatus.CREATED.value(), "User successfully added");
         }
     }
 

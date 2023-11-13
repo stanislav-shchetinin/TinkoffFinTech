@@ -26,7 +26,7 @@ public class RegistrationController {
     )
     @ApiResponses(value = {
             @ApiResponse(
-                    responseCode = "200",
+                    responseCode = "201",
                     description = "Пользователь успешно добавлен в базу"
             ),
             @ApiResponse(
