@@ -21,3 +21,9 @@ spring:
 weatherapi:
   key: ${API_KEY}
   baseUrl: "https://api.weatherapi.com/v1"
+
+cache:
+  course:
+    size: 9
+    loadFactor: .75f
+    accessOrder: true
