@@ -56,6 +56,11 @@ public class WeatherCityService implements WeatherCityBehavior{
         if (weather != null && weather.getCreationDate().toLocalDate().equals(localDate)){
             return weather.getTemperature();
         }
+        Double temperatureInBase = mapCityWeather.get(nameRegion, localDate);
+        Weather weatherInBase = factoryWeather.createWeather(
+                nameRegion, temperatureInBase, localDate.atStartOfDay()
+        );
+        lruCache.add(nameRegion, weatherInBase);
         return mapCityWeather.get(nameRegion, localDate);
     }
     @Override
