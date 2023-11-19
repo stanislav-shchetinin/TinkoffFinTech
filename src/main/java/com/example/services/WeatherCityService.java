@@ -1,5 +1,6 @@
 package com.example.services;
 
+import com.example.cache.LruCache;
 import com.example.requests.WeatherLiteRequest;
 import com.example.weather.FactoryWeather;
 import com.example.wrapper.WrapperListWeather;
@@ -11,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 @RequiredArgsConstructor
 @Getter
@@ -20,6 +22,7 @@ public class WeatherCityService implements WeatherCityBehavior{
     private final WrapperMapCityWeather mapCityWeather;
     private final WrapperSetDelete setDelete;
     private final FactoryWeather factoryWeather;
+    private final LruCache<String, Weather> lruCache;
 
     @Override
     public void add(String nameRegion, WeatherLiteRequest weatherLite){
@@ -29,6 +32,7 @@ public class WeatherCityService implements WeatherCityBehavior{
         setDelete.removeRegion(nameRegion);
         listWeather.add(weather);
         mapCityWeather.add(weather);
+        lruCache.add(weather.getNameRegion(), weather);
     }
 
     @Override
@@ -38,15 +42,20 @@ public class WeatherCityService implements WeatherCityBehavior{
 
     @Override
     public boolean isEntryInBase(String nameRegion, LocalDate localDate){
-        return isRegionInBase(nameRegion) &&
-                mapCityWeather.isInMap(nameRegion, localDate);
+        return isRegionInBase(nameRegion) && (lruCache.get(nameRegion) != null ||
+                mapCityWeather.isInMap(nameRegion, localDate));
     }
     @Override
     public boolean deleteRegion(String nameRegion){
+        lruCache.delete(nameRegion);
         return setDelete.addRegion(nameRegion);
     }
     @Override
     public Double getTemperature(String nameRegion, LocalDate localDate){
+        Weather weather = lruCache.get(nameRegion);
+        if (weather != null && weather.getCreationDate().toLocalDate().equals(localDate)){
+            return weather.getTemperature();
+        }
         return mapCityWeather.get(nameRegion, localDate);
     }
     @Override
@@ -54,6 +63,7 @@ public class WeatherCityService implements WeatherCityBehavior{
         Weather weather = factoryWeather.createWeather(
                 nameRegion, weatherLite.getTemperature(), weatherLite.getCreationDate()
         );
+        lruCache.add(nameRegion, weather);
         setDelete.removeRegion(nameRegion);
         //Метод add для mapCityWeather = метод put для HashMap (в случае существования)
         //произойдет обновление
