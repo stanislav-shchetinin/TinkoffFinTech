@@ -1,10 +1,12 @@
 package com.example.cache;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+@Component
 public class LruCache<K, V> implements Cached<K, V>{
 
     private final Map<K, V> cacheMap;
