@@ -25,10 +25,8 @@ import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(
-        webEnvironment = SpringBootTest.WebEnvironment.MOCK,
         classes = WeatherApplication.class
 )
-@AutoConfigureMockMvc
 public class WeatherCityServiceCacheTest {
 
     @Autowired
@@ -40,6 +38,8 @@ public class WeatherCityServiceCacheTest {
     @Autowired
     private FactoryWeather factoryWeather;
 
+    private static final String NAME_CITY = "Volgograd";
+    private static final LocalDateTime DATA = LocalDateTime.parse("2007-12-03T10:15:30");
     @Test
     public void contextLoads() {
         assertThat(weatherCityService).isNotNull();
@@ -47,25 +47,33 @@ public class WeatherCityServiceCacheTest {
 
     @Test
     public void addedInCache() {
-        String nameRegion = "Volgograd";
-        weatherCityService.getTemperature(nameRegion, LocalDate.now());
-        assertThat(lruCache.get(nameRegion)).isNotNull();
+        weatherCityService.getTemperature(NAME_CITY, LocalDate.now());
+        assertThat(lruCache.get(NAME_CITY)).isNotNull();
     }
 
     @Test
     public void noAccessBase() {
-        String nameRegion = "Volgograd";
-        LocalDateTime localDateTime = LocalDateTime.parse("2007-12-03T10:15:30");
         Double tempBase = 1000.;
         Double tempCache = 10.;
 
-        Weather weatherBase = factoryWeather.createWeather(nameRegion, tempBase, localDateTime);
+        Weather weatherBase = factoryWeather.createWeather(NAME_CITY, tempBase, DATA);
         mapCityWeather.add(weatherBase);
 
-
-        Weather weather = factoryWeather.createWeather(nameRegion, tempCache, localDateTime);
-        lruCache.add(nameRegion, weather);
-        Double temperature = weatherCityService.getTemperature(nameRegion, localDateTime.toLocalDate());
+        Weather weather = factoryWeather.createWeather(NAME_CITY, tempCache, DATA);
+        lruCache.add(NAME_CITY, weather);
+        Double temperature = weatherCityService.getTemperature(NAME_CITY, DATA.toLocalDate());
         assert(temperature.equals(tempCache));
+    }
+
+    @Test
+    public void deleteFromCache() {
+        Double temp = 10.;
+        Weather weather = factoryWeather.createWeather(NAME_CITY, temp, DATA);
+        weatherCityService.add(weather.getNameRegion(), new WeatherLiteRequest(
+                weather.getTemperature(), weather.getCreationDate()
+        ));
+        weatherCityService.getTemperature(weather.getNameRegion(), weather.getCreationDate().toLocalDate());
+        weatherCityService.deleteRegion(weather.getNameRegion());
+        assertThat(lruCache.get(weather.getNameRegion())).isNull();
     }
 }
