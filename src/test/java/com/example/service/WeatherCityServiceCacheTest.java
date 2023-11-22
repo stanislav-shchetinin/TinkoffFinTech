@@ -11,6 +11,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Spy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,15 +31,15 @@ import static org.mockito.Mockito.when;
 @AutoConfigureMockMvc
 public class WeatherCityServiceCacheTest {
 
-    @InjectMocks
+    @Autowired
     private  WeatherCityService weatherCityService;
-    @Mock
+    @Autowired
     private WrapperMapCityWeather mapCityWeather;
-    @Mock
+    @Autowired
     private LruCache<String, Weather> lruCache;
-
     @Autowired
     private FactoryWeather factoryWeather;
+
     @Test
     public void contextLoads() {
         assertThat(weatherCityService).isNotNull();
@@ -53,15 +54,13 @@ public class WeatherCityServiceCacheTest {
 
     @Test
     public void noAccessBase() {
-        boolean access = false;
-
         String nameRegion = "Volgograd";
         LocalDateTime localDateTime = LocalDateTime.parse("2007-12-03T10:15:30");
         Double tempBase = 1000.;
         Double tempCache = 10.;
 
-        when(mapCityWeather.get(nameRegion, localDateTime.toLocalDate()))
-                .thenReturn(tempBase);
+        Weather weatherBase = factoryWeather.createWeather(nameRegion, tempBase, localDateTime);
+        mapCityWeather.add(weatherBase);
 
 
         Weather weather = factoryWeather.createWeather(nameRegion, tempCache, localDateTime);
