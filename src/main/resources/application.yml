@@ -17,6 +17,13 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
   liquibase:
     change-log: classpath:h2-database-changelog.yml
+  kafka:
+    queue:
+      size: 30
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: "my-group"
+      auto-offset-reset: earliest
 
 weatherapi:
   key: ${API_KEY}
@@ -27,3 +34,7 @@ cache:
     size: 9
     loadFactor: .75f
     accessOrder: true
+
+scheduler:
+  cities: Volgograd, Saint-Petersburg, Moscow, London, Paris
+  break: 1000
